@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Unit Testing Angular Apps | The Data Doodle</title>
+  <title>Promise Array Binding | The Data Doodle</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="A document I authored to get the team all on the same page for unit testing.(Use the zoom button to read. Also, notice the page tabs.)">
+  <meta name="description" content="Progressbar Bound to Promise ArrayScenarioThe application is periodically caching images (asynchronously). Whenever images are being pulled over the wire we want to show the progressbar (angular boots">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Unit Testing Angular Apps">
-<meta property="og:url" content="http://yoursite.com/blog/2016/03/14/tidbits/unit-testing-angular-apps/index.html">
+<meta property="og:title" content="Promise Array Binding">
+<meta property="og:url" content="http://yoursite.com/blog/2016/03/22/techsketch/ts-05-progressbar-bound-to-promise-array/index.html">
 <meta property="og:site_name" content="The Data Doodle">
-<meta property="og:description" content="A document I authored to get the team all on the same page for unit testing.(Use the zoom button to read. Also, notice the page tabs.)">
-<meta property="og:updated_time" content="2016-03-18T09:37:38.000Z">
+<meta property="og:description" content="Progressbar Bound to Promise ArrayScenarioThe application is periodically caching images (asynchronously). Whenever images are being pulled over the wire we want to show the progressbar (angular boots">
+<meta property="og:image" content="http://yoursite.com/blog/blog/static/ts-05-progressbar-bound-to-promise-array.png">
+<meta property="og:updated_time" content="2016-03-24T01:51:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Unit Testing Angular Apps">
-<meta name="twitter:description" content="A document I authored to get the team all on the same page for unit testing.(Use the zoom button to read. Also, notice the page tabs.)">
+<meta name="twitter:title" content="Promise Array Binding">
+<meta name="twitter:description" content="Progressbar Bound to Promise ArrayScenarioThe application is periodically caching images (asynchronously). Whenever images are being pulled over the wire we want to show the progressbar (angular boots">
+<meta name="twitter:image" content="http://yoursite.com/blog/blog/static/ts-05-progressbar-bound-to-promise-array.png">
   
     <link rel="alternate" href="/atom.xml" title="The Data Doodle" type="application/atom+xml">
   
@@ -83,13 +85,13 @@
   <div class="container">
     <div class="row">
         <div class="col-sm-8 blog-main">
-          <article id="post-tidbits/unit-testing-angular-apps" class="article article-type-post" itemscope itemprop="blogPost">
+          <article id="post-techsketch/ts-05-progressbar-bound-to-promise-array" class="article article-type-post" itemscope itemprop="blogPost">
 
   <header class="article-header">
     
   
     <h1 class="article-title" itemprop="name">
-      Unit Testing Angular Apps
+      Promise Array Binding
     </h1>
   
 
@@ -98,13 +100,13 @@
 
   <div class="article-meta">
     <div class="article-datetime">
-  <a href="/blog/2016/03/14/tidbits/unit-testing-angular-apps/" class="article-date"><time datetime="2016-03-14T10:50:08.000Z" itemprop="datePublished">2016-03-14</time></a>
+  <a href="/blog/2016/03/22/techsketch/ts-05-progressbar-bound-to-promise-array/" class="article-date"><time datetime="2016-03-22T10:50:08.000Z" itemprop="datePublished">2016-03-22</time></a>
 </div>
 
     <div class="article-author">Kent Merrell</div>
     
   <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/Tidbits/">Tidbits</a>
+    <a class="article-category-link" href="/blog/categories/Tech-Sketch/">Tech Sketch</a>
   </div>
 
 
@@ -113,8 +115,17 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="A-document-I-authored-to-get-the-team-all-on-the-same-page-for-unit-testing"><a href="#A-document-I-authored-to-get-the-team-all-on-the-same-page-for-unit-testing" class="headerlink" title="A document I authored to get the team all on the same page for unit testing."></a>A document I authored to get the team all on the same page for unit testing.</h4><p>(Use the zoom button to read. Also, notice the page tabs.)<br><a id="more"></a></p>
-<div style="width: 600px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:600px; height:480px" src="https://www.lucidchart.com/documents/embeddedchart/2100a7d6-f5f4-4c70-8c93-2f66d3d966a7" id="oYs4GHa77.SA"></iframe></div>
+        <h3 id="Progressbar-Bound-to-Promise-Array"><a href="#Progressbar-Bound-to-Promise-Array" class="headerlink" title="Progressbar Bound to Promise Array"></a>Progressbar Bound to Promise Array</h3><h4 id="Scenario"><a href="#Scenario" class="headerlink" title="Scenario"></a>Scenario</h4><p>The application is periodically caching images (asynchronously). Whenever images are being pulled over the wire we want to show the progressbar (angular bootstrap directive) and the percentage complete of the images. Progressbar doesn’t need to show the percent downloaded of a single image, but the percentage of the list of images that have completed (or failed) download.<br><img src="/blog/static/ts-05-progressbar-bound-to-promise-array.png" alt=""></p>
+<a id="more"></a>
+<h4 id="Dependencies"><a href="#Dependencies" class="headerlink" title="Dependencies"></a>Dependencies</h4><p>(Note: these dependencies are statically loaded in the vendor_local directory of this techsketch to enable disconnected editing and viewing on demo site)</p>
+<ul>
+<li>angular  AngularJS v1.3.20</li>
+<li>angular-animate AngularJS v1.3.20</li>
+<li>angular-ui-bootstrap Version: 0.12.1 - 2015-02-20</li>
+<li>bootstrap css (an custom edited version of v3.3.6)</li>
+</ul>
+<h4 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h4><p><a href="http://datadoodler.github.io/ts-05-progressbar-bound-to-promise-array/" target="_blank" rel="external">http://datadoodler.github.io/ts-05-progressbar-bound-to-promise-array/</a></p>
+
       
     </div>
 
@@ -124,12 +135,12 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/blog/2016/03/14/tidbits/unit-testing-angular-apps/" data-id="cim0zwg3g001hanxv7vib31gv" class="article-share-link">
+      <a data-url="http://yoursite.com/blog/blog/2016/03/22/techsketch/ts-05-progressbar-bound-to-promise-array/" data-id="cim5m38380001wbxvj3ju8ni1" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Angular/">Angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Jasmine/">Jasmine</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Unit-Testing/">Unit Testing</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Angular/">Angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Async/">Async</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Bootstrap/">Bootstrap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Promises/">Promises</a></li></ul>
 
 
     </footer>
@@ -139,16 +150,16 @@
 <ul id="article-nav" class="nav nav-pills nav-justified">
   
   <li role="presentation">
-    <a href="/blog/2016/03/14/blog-tasks/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/2016/03/18/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
       <i class="fa fa-chevron-left pull-left"></i>
-      <span class="article-nav-link-title">Blog Tasks</span>
+      <span class="article-nav-link-title">Hello World</span>
     </a>
   </li>
   
   
   <li role="presentation">
-    <a href="/blog/2016/03/14/bankerdoodle/fdic-query-notation/" id="article-nav-newer" class="article-nav-link-wrap">
-      <span class="article-nav-link-title">FDIC Query Notation</span>
+    <a href="/blog/2017/03/14/bankerdoodle/bankerdoodle-intro/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">BankerDoodle Intro</span>
       <i class="fa fa-chevron-right pull-right"></i>
     </a>
   </li>
