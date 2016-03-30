@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: Requirements | The Data Doodle</title>
+  <title>Webpack Setup | The Data Doodle</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Making the world smarter">
-<meta property="og:type" content="website">
-<meta property="og:title" content="The Data Doodle">
-<meta property="og:url" content="http://yoursite.com/blog/tags/Requirements/index.html">
+  <meta name="description" content="Webpack NotesThere are many options for using webpack. These notes won’t be an exhaustive treatise on the subject, but merely cover how to implement webpack for my usage current scenario, namely, the">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Webpack Setup">
+<meta property="og:url" content="http://yoursite.com/blog/2016/03/22/tidbits/webpack-setup/index.html">
 <meta property="og:site_name" content="The Data Doodle">
-<meta property="og:description" content="Making the world smarter">
+<meta property="og:description" content="Webpack NotesThere are many options for using webpack. These notes won’t be an exhaustive treatise on the subject, but merely cover how to implement webpack for my usage current scenario, namely, the">
+<meta property="og:updated_time" content="2016-03-30T10:12:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="The Data Doodle">
-<meta name="twitter:description" content="Making the world smarter">
+<meta name="twitter:title" content="Webpack Setup">
+<meta name="twitter:description" content="Webpack NotesThere are many options for using webpack. These notes won’t be an exhaustive treatise on the subject, but merely cover how to implement webpack for my usage current scenario, namely, the">
   
     <link rel="alternate" href="/atom.xml" title="The Data Doodle" type="application/atom+xml">
   
@@ -82,90 +83,97 @@
   <div class="container">
     <div class="row">
         <div class="col-sm-8 blog-main">
-          
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/blog/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
+          <article id="post-tidbits/webpack-setup" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <header class="article-header">
     
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2017/03/15/datadoodler-intro/">DataDoodler Intro</a>
+    <h1 class="article-title" itemprop="name">
+      Webpack Setup
     </h1>
   
 
 
+  </header>
+
+  <div class="article-meta">
     <div class="article-datetime">
-  <a href="/blog/2017/03/15/datadoodler-intro/" class="archive-article-date"><time datetime="2017-03-15T10:50:08.000Z" itemprop="datePublished">March 15th</time></a>
+  <a href="/blog/2016/03/22/tidbits/webpack-setup/" class="article-date"><time datetime="2016-03-22T10:50:08.000Z" itemprop="datePublished">2016-03-22</time></a>
 </div>
 
-  </header>
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>In a nutshell, DataDoodler is a platform for quickly ‘doodling’ data analytics. It aims to do for the analytics world what Plunker (<a href="http://plnkr.co/">http://plnkr.co/</a>) has done for the world of application development. </p>
-    
-    <p class="article-more-link">
-      <a href="/blog/2017/03/15/datadoodler-intro/#more">Read More</a>
-    </p>
     
     
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/TidBits/">TidBits</a>
   </div>
-</article>
-
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/blog/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2016/03/26/learning-path-roadmap/">Learning Path Roadmap</a>
-    </h1>
-  
 
 
-    <div class="article-datetime">
-  <a href="/blog/2016/03/26/learning-path-roadmap/" class="archive-article-date"><time datetime="2016-03-26T10:50:08.000Z" itemprop="datePublished">March 26th</time></a>
-</div>
-
-  </header>
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>I’m eager to have my kids help with building DataDoodler. I believe it is a great opportunity for them to learn valuable skills and be involved in building a tool that will help them in their schooling years <em>and</em> beyond. I needed some sort of matrix to guide me in what to teach them. The embedded chart below describes the skill path required to create the various projects in the DataDoodler platform. I am starting my kids in the 100-level courses. Of course, my oldest child, Josh, has a different contribution to make in the area of data science / R programming.</p>
-    
-    <p class="article-more-link">
-      <a href="/blog/2016/03/26/learning-path-roadmap/#more">Read More</a>
-    </p>
-    
-    
   </div>
-</article>
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="Webpack-Notes"><a href="#Webpack-Notes" class="headerlink" title="Webpack Notes"></a>Webpack Notes</h4><p>There are <em>many</em> options for using webpack. These notes won’t be an exhaustive treatise on the subject, but merely cover how to implement webpack for my usage current scenario, namely, the <a href="https://github.com/datadoodler/datadoodler-admin-dashboard" target="_blank" rel="external">DataDoodler Administration Dashboard</a>.</p>
+<h4 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h4><p>Basic webpack, and (optionally) the dev server, which provides a basic express app.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm-install --save-dev webpack, webpack-dev-server</span><br></pre></td></tr></table></figure>
+<p>Loaders: Webpack assumes all files are javascript unless additional loaders are invoked to handle other file types.</p>
+<p>npm install –save-dev css-loader style-loader</p>
+<h4 id="Running"><a href="#Running" class="headerlink" title="Running"></a>Running</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">webpack --devtool source-map ./entry.js bundle.js -w</span><br></pre></td></tr></table></figure>
+<ul>
+<li><b>source-map</b>: Browser will show source files individually under the “webpack/.” namespace.</li>
+<li><b>./entry.js</b>: The starting point. Webpack will not only compile this file, but will use it as a starting point and recursively compile any external files that it detects are dependencies.</li>
+<li><b>bundle.js</b>: the target file that will receive all the Webpack goodness.</li>
+<li><b>-w</b>: webpack will watch for changes and automatically recompile. </li>
+</ul>
+<h5 id="More-convenint-to-use-a-config-file"><a href="#More-convenint-to-use-a-config-file" class="headerlink" title="More convenint to use a config file"></a>More convenint to use a config file</h5><p>You can use the command line to specify a lot of the options for running webpack, but using a config file is much more convenient. Webpack will look for webpack.config.js </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">    entry: &quot;./entry.js&quot;,</span><br><span class="line">    output: &#123;</span><br><span class="line">        path: __dirname,</span><br><span class="line">        filename: &quot;bundle.js&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    devtool: &apos;source-map&apos;,</span><br><span class="line">    module: &#123;</span><br><span class="line">        preLoaders: [</span><br><span class="line">            &#123;test: /\.js$/, exclude: /node_modues/, loader: &apos;jshint-loader&apos;&#125;</span><br><span class="line">        ],</span><br><span class="line">        loaders: [</span><br><span class="line">            &#123;test: /\.css$/, loaders: [&apos;style&apos;,&apos;css&apos;]&#125;,</span><br><span class="line">            &#123;test: /\.html$/, loader: &apos;raw&apos;&#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="Install-the-command-line-interface-for-the-webpack-dev-server"><a href="#Install-the-command-line-interface-for-the-webpack-dev-server" class="headerlink" title="Install the command line interface for the webpack dev server."></a>Install the command line interface for the webpack dev server.</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">webpack-dev-server -g</span><br></pre></td></tr></table></figure>
+<h5 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h5><p>this is package.json</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;ts-00-active-webpack&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;1.0.0&quot;,</span><br><span class="line">  &quot;description&quot;: &quot;&quot;,</span><br><span class="line">  &quot;main&quot;: &quot;index.js&quot;,</span><br><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;,</span><br><span class="line">    &quot;start&quot;: &quot;webpack-dev-server --hot --inine --config webpack.config.js&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;author&quot;: &quot;kent merrell&quot;,</span><br><span class="line">  &quot;license&quot;: &quot;MIT&quot;,</span><br><span class="line">  &quot;devDependencies&quot;: &#123;</span><br><span class="line">    &quot;css-loader&quot;: &quot;^0.23.1&quot;,</span><br><span class="line">    &quot;http-server&quot;: &quot;^0.9.0&quot;,</span><br><span class="line">    &quot;jshint&quot;: &quot;^2.9.1&quot;,</span><br><span class="line">    &quot;jshint-loader&quot;: &quot;^0.8.3&quot;,</span><br><span class="line">    &quot;raw-loader&quot;: &quot;^0.5.1&quot;,</span><br><span class="line">    &quot;style-loader&quot;: &quot;^0.13.1&quot;,</span><br><span class="line">    &quot;webpack&quot;: &quot;^1.12.14&quot;,</span><br><span class="line">    &quot;webpack-dev-server&quot;: &quot;^1.14.1&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;dependencies&quot;: &#123;&#125;,</span><br><span class="line">  &quot;repository&quot;: &#123;</span><br><span class="line">    &quot;type&quot;: &quot;git&quot;,</span><br><span class="line">    &quot;url&quot;: &quot;git+https://github.com/datadoodler/ts-00-active-webpack.git&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;bugs&quot;: &#123;</span><br><span class="line">    &quot;url&quot;: &quot;https://github.com/datadoodler/ts-00-active-webpack/issues&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;homepage&quot;: &quot;https://github.com/datadoodler/ts-00-active-webpack#readme&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/blog/blog/2016/03/22/tidbits/webpack-setup/" data-id="cimeoj3nm0000nsxvz2wfnbs2" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Webpack/">Webpack</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+    
+<ul id="article-nav" class="nav nav-pills nav-justified">
+  
+  <li role="presentation">
+    <a href="/blog/2016/03/22/techsketch/ts-05-progressbar-bound-to-promise-array/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">Promise Array Binding</span>
+    </a>
+  </li>
+  
+  
+  <li role="presentation">
+    <a href="/blog/2016/03/26/learning-path-roadmap/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">Learning Path Roadmap</span>
+      <i class="fa fa-chevron-right pull-right"></i>
+    </a>
+  </li>
+  
+</ul>
+
 
   
-  
-    </div></section>
-  
+</article>
 
 
 
