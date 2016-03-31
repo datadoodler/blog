@@ -5,23 +5,20 @@
   
   <title>Angular Slider | The Data Doodle</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="See [https://jsfiddle.net/ValentinH/954eve2L]Working demo: [http://datadoodler.github.io/ts-06-angular-slider]
-Source code: [https://github.com/datadoodler/ts-06-angular-slider]
-Both of these sliders">
+  <meta name="description" content="Demo: [http://datadoodler.github.io/ts-06-angular-slider]
+Source: [https://github.com/datadoodler/ts-06-angular-slider]">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Angular Slider">
 <meta property="og:url" content="http://yoursite.com/blog/2016/03/29/techsketch/ts-06-angular-slider/index.html">
 <meta property="og:site_name" content="The Data Doodle">
-<meta property="og:description" content="See [https://jsfiddle.net/ValentinH/954eve2L]Working demo: [http://datadoodler.github.io/ts-06-angular-slider]
-Source code: [https://github.com/datadoodler/ts-06-angular-slider]
-Both of these sliders">
+<meta property="og:description" content="Demo: [http://datadoodler.github.io/ts-06-angular-slider]
+Source: [https://github.com/datadoodler/ts-06-angular-slider]">
 <meta property="og:image" content="http://yoursite.com/blog/blog/static/ts-06-angular-slider1.png">
-<meta property="og:updated_time" content="2016-03-31T00:47:33.000Z">
+<meta property="og:updated_time" content="2016-03-31T01:05:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Angular Slider">
-<meta name="twitter:description" content="See [https://jsfiddle.net/ValentinH/954eve2L]Working demo: [http://datadoodler.github.io/ts-06-angular-slider]
-Source code: [https://github.com/datadoodler/ts-06-angular-slider]
-Both of these sliders">
+<meta name="twitter:description" content="Demo: [http://datadoodler.github.io/ts-06-angular-slider]
+Source: [https://github.com/datadoodler/ts-06-angular-slider]">
 <meta name="twitter:image" content="http://yoursite.com/blog/blog/static/ts-06-angular-slider1.png">
   
     <link rel="alternate" href="/atom.xml" title="The Data Doodle" type="application/atom+xml">
@@ -121,13 +118,13 @@ Both of these sliders">
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="See-https-jsfiddle-net-ValentinH-954eve2L"><a href="#See-https-jsfiddle-net-ValentinH-954eve2L" class="headerlink" title="See [https://jsfiddle.net/ValentinH/954eve2L]"></a>See [<a href="https://jsfiddle.net/ValentinH/954eve2L" target="_blank" rel="external">https://jsfiddle.net/ValentinH/954eve2L</a>]</h4><p>Working demo: [<a href="http://datadoodler.github.io/ts-06-angular-slider" target="_blank" rel="external">http://datadoodler.github.io/ts-06-angular-slider</a>]</p>
-<p>Source code: [<a href="https://github.com/datadoodler/ts-06-angular-slider" target="_blank" rel="external">https://github.com/datadoodler/ts-06-angular-slider</a>]</p>
-<p>Both of these sliders are bound to the same object on the backend. (See object at bottom). The first display properly when rendered. The second needs to be forced by broadcasting an event on the rootscope.</p>
+        <p>Demo: [<a href="http://datadoodler.github.io/ts-06-angular-slider" target="_blank" rel="external">http://datadoodler.github.io/ts-06-angular-slider</a>]</p>
+<p>Source: [<a href="https://github.com/datadoodler/ts-06-angular-slider" target="_blank" rel="external">https://github.com/datadoodler/ts-06-angular-slider</a>]</p>
 <p><img src="/blog/static/ts-06-angular-slider1.png" alt=""></p>
 <a id="more"></a>
+<p>Both of these sliders are bound to the same object on the backend. (See object at bottom). The first display properly when rendered. The second needs to be forced by broadcasting an event on the rootscope.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function clickButton() &#123;</span><br><span class="line">     this.showSpeedSlider = !this.showSpeedSlider;</span><br><span class="line">     if(this.forceRender)&#123;</span><br><span class="line">         // Force rendering at every iteration of the interval.</span><br><span class="line">         $interval(function () &#123;</span><br><span class="line">            $rootScope.$broadcast(&apos;rzSliderForceRender&apos;);</span><br><span class="line">         &#125;, 1,500, true, $rootScope)</span><br><span class="line">     &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>This instance displays properly when initialized</p>
+<p>For other examples of using rzslider, see [<a href="https://jsfiddle.net/ValentinH/954eve2L" target="_blank" rel="external">https://jsfiddle.net/ValentinH/954eve2L</a>]</p>
 
       
     </div>
