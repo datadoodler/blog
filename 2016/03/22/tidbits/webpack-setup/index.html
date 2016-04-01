@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/blog/2016/03/22/tidbits/webpack-setup/index.html">
 <meta property="og:site_name" content="The Data Doodle">
 <meta property="og:description" content="Webpack NotesThere are many options for using webpack. These notes won’t be an exhaustive treatise on the subject, but merely cover how to implement webpack for my usage current scenario, namely, the">
-<meta property="og:updated_time" content="2016-03-30T10:12:16.000Z">
+<meta property="og:updated_time" content="2016-04-01T22:45:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Webpack Setup">
 <meta name="twitter:description" content="Webpack NotesThere are many options for using webpack. These notes won’t be an exhaustive treatise on the subject, but merely cover how to implement webpack for my usage current scenario, namely, the">
@@ -116,6 +116,7 @@
         <h4 id="Webpack-Notes"><a href="#Webpack-Notes" class="headerlink" title="Webpack Notes"></a>Webpack Notes</h4><p>There are <em>many</em> options for using webpack. These notes won’t be an exhaustive treatise on the subject, but merely cover how to implement webpack for my usage current scenario, namely, the <a href="https://github.com/datadoodler/datadoodler-admin-dashboard" target="_blank" rel="external">DataDoodler Administration Dashboard</a>.</p>
 <h4 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h4><p>Basic webpack, and (optionally) the dev server, which provides a basic express app.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm-install --save-dev webpack, webpack-dev-server</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>Loaders: Webpack assumes all files are javascript unless additional loaders are invoked to handle other file types.</p>
 <p>npm install –save-dev css-loader style-loader</p>
 <h4 id="Running"><a href="#Running" class="headerlink" title="Running"></a>Running</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">webpack --devtool source-map ./entry.js bundle.js -w</span><br></pre></td></tr></table></figure>
