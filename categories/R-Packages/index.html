@@ -3,27 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Blog Tasks | The Data Doodle</title>
+  <title>Category: R Packages | The Data Doodle</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="What is a ‘Tech Sketch” and  how is it done?
-React.js components
-DataDoodler Roadmap
-Replace ‘Tags’ navigation component with a ‘Search’ component that allows real-time searching of titles, tags, and">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Blog Tasks">
-<meta property="og:url" content="http://yoursite.com/blog/2016/03/14/blog-tasks/index.html">
+  <meta name="description" content="Making the world smarter">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Data Doodle">
+<meta property="og:url" content="http://yoursite.com/blog/categories/R-Packages/index.html">
 <meta property="og:site_name" content="The Data Doodle">
-<meta property="og:description" content="What is a ‘Tech Sketch” and  how is it done?
-React.js components
-DataDoodler Roadmap
-Replace ‘Tags’ navigation component with a ‘Search’ component that allows real-time searching of titles, tags, and">
-<meta property="og:updated_time" content="2016-03-18T14:17:57.000Z">
+<meta property="og:description" content="Making the world smarter">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog Tasks">
-<meta name="twitter:description" content="What is a ‘Tech Sketch” and  how is it done?
-React.js components
-DataDoodler Roadmap
-Replace ‘Tags’ navigation component with a ‘Search’ component that allows real-time searching of titles, tags, and">
+<meta name="twitter:title" content="The Data Doodle">
+<meta name="twitter:description" content="Making the world smarter">
   
     <link rel="alternate" href="/atom.xml" title="The Data Doodle" type="application/atom+xml">
   
@@ -92,86 +82,72 @@ Replace ‘Tags’ navigation component with a ‘Search’ component that allow
   <div class="container">
     <div class="row">
         <div class="col-sm-8 blog-main">
-          <article id="post-blog-tasks" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <header class="article-header">
+          
+  
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/blog/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <header class="archive-article-header">
     
   
-    <h1 class="article-title" itemprop="name">
-      Blog Tasks
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/blog/2016/03/30/r-packages/chess-doodle/">Introduction to ChessDoodle Functions</a>
     </h1>
   
 
 
-  </header>
-
-  <div class="article-meta">
     <div class="article-datetime">
-  <a href="/blog/2016/03/14/blog-tasks/" class="article-date"><time datetime="2016-03-14T10:50:08.000Z" itemprop="datePublished">2016-03-14</time></a>
+  <a href="/blog/2016/03/30/r-packages/chess-doodle/" class="archive-article-date"><time datetime="2016-03-30T10:50:08.000Z" itemprop="datePublished">March 30th</time></a>
 </div>
 
+  </header>
+  <div class="article-entry" itemprop="articleBody">
     
+    <p>This workspace is geared to help the user to explore and think about the chessboard. It is available <a href="https://github.com/brantmerrell/chessdoodles/blob/master/chessDoodles.RData" target="_blank" rel="external">here</a>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># clear workspace</span><br><span class="line">rm(list=ls())</span><br><span class="line"></span><br><span class="line"># load workspace</span><br><span class="line">load(&quot;chessDoodles.RData&quot;)</span><br></pre></td></tr></table></figure>
+<p>The regex patterns interpret strings. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls(pattern = &quot;Pattern&quot;)</span><br></pre></td></tr></table></figure>
+<p>The pathPrior() function is named after the term <em>a priori</em>. For a given input piece and square of the chessboard, it returns the <em>path</em> the piece can take on an empty chessboard, <em>prior</em> to the circumstance that arise when a game is in play.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pathPrior(piece = &quot;bishop&quot;, square = &quot;e5&quot;)</span><br><span class="line">pathPrior(piece = &quot;knight&quot;, square = &quot;e5&quot;)</span><br></pre></td></tr></table></figure>
+<p>The pawn is the only piece unable to move backwards, and its <em>direction</em> depends on its color.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pathPrior(piece = &quot;black pawn&quot;, square = &quot;e5&quot;)</span><br><span class="line">pathPrior(piece = &quot;white pawn&quot;, square = &quot;e5&quot;)</span><br></pre></td></tr></table></figure>
+<p>It is the only piece whose color needs to be specified for pathPrior.() to work effectively. <em>Post.()</em> functions are conversely named after the term <em>a posteriori</em>. They trim each piece’s options according to the circumstances of the entire board. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls(pattern = &quot;Post&quot;)</span><br></pre></td></tr></table></figure>
+<p>They cannot be used unless a snapshot of the chessboard’s position exists for them to analyze. The snapshots exist as rows of the <em>position</em> data frame, which has one variable for each square of the chessboard. Each variable in <em>position</em> is a square of the chessboard,</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">colnames(position)</span><br></pre></td></tr></table></figure>
+<p>and each observation is a snapshot of the game:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">set.seed(123); </span><br><span class="line">position[sample(2:nrow(position),1), </span><br><span class="line">         sample(1:ncol(position),10)]</span><br></pre></td></tr></table></figure>
+<p>The first row is the <em>empty</em> chessboard, with no pieces listed for any of the squares. The second row is the <em>zero</em> position, with pieces set at starting positions.  </p>
+<p>We can compare the mobility of a white knight on b1 before and after the pieces are set up:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pathPrior(piece = &quot;knight&quot;, square = &quot;b1&quot;)</span><br><span class="line">pathPost.(square = &quot;b1&quot;, game_pgn = &quot;000_zero&quot;)</span><br></pre></td></tr></table></figure>
+<p>Because of the game_pgn input, <em>pathPost.</em> knows that the piece on h2 is a white knight, and that it cannot move to <strong>d2</strong> because that space is occupied by another pawn.</p>
+<p>Let us begin by observing the <a href="https://www.chess.com/echess/game?id=131764454" target="_blank" rel="external">game</a> I am currently playing. We can modify the link into the format <em>“<a href="http://username:password@chess.com/" target="_blank" rel="external">http://username:password@chess.com/</a>…”</em> and pass it to the <em>rawToTidy()</em> function as follows:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">LinkID &lt;- 131764454</span><br><span class="line">Username &lt;- &quot;thinkboolean&quot;</span><br><span class="line">Password &lt;- &quot;blogChess&quot; # counting on you not to abuse this; feel free to contact me for details</span><br><span class="line">Link &lt;- paste(&quot;http://&quot;,</span><br><span class="line">              Username,</span><br><span class="line">              &quot;:&quot;,</span><br><span class="line">              Password,</span><br><span class="line">              &quot;@chess.com/echess/game?id=&quot;,</span><br><span class="line">              LinkID)</span><br><span class="line">print(Link)</span><br><span class="line">games &lt;- rawToTidy(Link)</span><br><span class="line">print(games)</span><br></pre></td></tr></table></figure>
+<p>Now we can expand this pgn from a single string to a data frame of moves using <em>tidyToPgn()</em>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">moves &lt;- as.data.frame(tidyToPgn(games,n=1, string = &quot;xmpl&quot;))</span><br><span class="line">print(moves)</span><br></pre></td></tr></table></figure>
+<p>The first move is pawn to e4. Inputing it into the <em>newPosition()</em> function replicates the last (or specified) row of the <em>position</em> frame, places the white pawn on e4, and removes it from e2.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">position[,c(&quot;e2&quot;,&quot;e4&quot;)]</span><br><span class="line">newPosition(new_pgn = &quot;1.e4&quot;, </span><br><span class="line">            startPosition = nrow(position))[,</span><br><span class="line">                                            c(&quot;e2&quot;,&quot;e4&quot;)]</span><br></pre></td></tr></table></figure>
+<p>newPosition() is designed to sequentially build on the <em>position</em> object. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">for(n in 1:nrow(moves))&#123;</span><br><span class="line">  pgn &lt;- paste(&quot;xmpl1&quot;,</span><br><span class="line">               as.vector(moves[n,&quot;pgn&quot;]),</span><br><span class="line">               sep=&quot;_&quot;)</span><br><span class="line">  if(!pgn %in% row.names(position))&#123;</span><br><span class="line">    position&lt;-rbind(position, newPosition(new_pgn = pgn))</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">rownames(position)</span><br></pre></td></tr></table></figure>
+<p>These functions will provide the analytic muscle for future blogging analyses. </p>
+
     
-  <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/DataDoodler/">DataDoodler</a>
   </div>
-
-
-  </div>
-  <div class="article-inner">
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>What is a ‘Tech Sketch” and  how is it done?</li>
-<li>React.js components</li>
-<li>DataDoodler Roadmap</li>
-<li>Replace ‘Tags’ navigation component with a ‘Search’ component that allows real-time searching of titles, tags, and categories.</li>
-</ul>
-
-      
-    </div>
-
-    
-      
-
-    
-
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/blog/2016/03/14/blog-tasks/" data-id="cim0zwg0s0001anxve368n1o8" class="article-share-link">
-        <i class="fa fa-share"></i> Share
-      </a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Plans/">Plans</a></li></ul>
-
-
-    </footer>
-  </div>
-  
-    
-<ul id="article-nav" class="nav nav-pills nav-justified">
-  
-  <li role="presentation">
-    <a href="/blog/2015/11/01/techsketch/address-validation-directive/" id="article-nav-older" class="article-nav-link-wrap">
-      <i class="fa fa-chevron-left pull-left"></i>
-      <span class="article-nav-link-title">Address Validation Directive</span>
-    </a>
-  </li>
-  
-  
-  <li role="presentation">
-    <a href="/blog/2016/03/14/tidbits/unit-testing-angular-apps/" id="article-nav-newer" class="article-nav-link-wrap">
-      <span class="article-nav-link-title">Unit Testing Angular Apps</span>
-      <i class="fa fa-chevron-right pull-right"></i>
-    </a>
-  </li>
-  
-</ul>
-
-
-  
 </article>
+
+  
+  
+    </div></section>
+  
 
 
 
