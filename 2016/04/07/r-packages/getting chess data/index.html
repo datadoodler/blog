@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>FDIC Old SQL flow | The Data Doodle</title>
+  <title>How can the data for a game be obtained and neatened? | The Data Doodle</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="An early approach to working with FDIC data was to put it all in a SQL database. The idea was to use dynamic sql to build tables with only the columns necessary for the current study. This approach wa">
+  <meta name="description" content="I built this package for compatibility with chess.com, so contact me if you want me to use it for other sources. Everything required for this demo can be found in my chessDoodles workspace
+12345# clea">
 <meta property="og:type" content="article">
-<meta property="og:title" content="FDIC Old SQL flow">
-<meta property="og:url" content="http://yoursite.com/blog/2014/11/01/bankerdoodle/fdic-old-sql-flow/index.html">
+<meta property="og:title" content="How can the data for a game be obtained and neatened?">
+<meta property="og:url" content="http://yoursite.com/blog/2016/04/07/r-packages/getting chess data/index.html">
 <meta property="og:site_name" content="The Data Doodle">
-<meta property="og:description" content="An early approach to working with FDIC data was to put it all in a SQL database. The idea was to use dynamic sql to build tables with only the columns necessary for the current study. This approach wa">
-<meta property="og:updated_time" content="2016-03-18T13:58:32.000Z">
+<meta property="og:description" content="I built this package for compatibility with chess.com, so contact me if you want me to use it for other sources. Everything required for this demo can be found in my chessDoodles workspace
+12345# clea">
+<meta property="og:updated_time" content="2016-04-07T19:05:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="FDIC Old SQL flow">
-<meta name="twitter:description" content="An early approach to working with FDIC data was to put it all in a SQL database. The idea was to use dynamic sql to build tables with only the columns necessary for the current study. This approach wa">
+<meta name="twitter:title" content="How can the data for a game be obtained and neatened?">
+<meta name="twitter:description" content="I built this package for compatibility with chess.com, so contact me if you want me to use it for other sources. Everything required for this demo can be found in my chessDoodles workspace
+12345# clea">
   
     <link rel="alternate" href="/atom.xml" title="The Data Doodle" type="application/atom+xml">
   
@@ -83,13 +86,13 @@
   <div class="container">
     <div class="row">
         <div class="col-sm-8 blog-main">
-          <article id="post-bankerdoodle/fdic-old-sql-flow" class="article article-type-post" itemscope itemprop="blogPost">
+          <article id="post-r-packages/getting chess data" class="article article-type-post" itemscope itemprop="blogPost">
 
   <header class="article-header">
     
   
     <h1 class="article-title" itemprop="name">
-      FDIC Old SQL flow
+      How can the data for a game be obtained and neatened?
     </h1>
   
 
@@ -98,13 +101,13 @@
 
   <div class="article-meta">
     <div class="article-datetime">
-  <a href="/blog/2014/11/01/bankerdoodle/fdic-old-sql-flow/" class="article-date"><time datetime="2014-11-01T10:50:08.000Z" itemprop="datePublished">2014-11-01</time></a>
+  <a href="/blog/2016/04/07/r-packages/getting chess data/" class="article-date"><time datetime="2016-04-07T04:00:00.000Z" itemprop="datePublished">2016-04-07</time></a>
 </div>
 
-    <div class="article-author">Kent Merrell</div>
+    <div class="article-author">Josh Merrell</div>
     
   <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/BankerDoodle/">BankerDoodle</a>
+    <a class="article-category-link" href="/blog/categories/R-Packages/">R Packages</a>
   </div>
 
 
@@ -113,11 +116,28 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <p>An early approach to working with FDIC data was to put it all in a SQL database. The idea was to use dynamic sql to build tables with only the columns necessary for the current study. This approach was doomed by in static nature of sql tables and the continual need to regenerate DDL and load data.</p>
-<p>The new approach is centered on DynamodDb.</p>
-<a id="more"></a>
- <div style="width: 600px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:600px; height:480px" src="https://www.lucidchart.com/documents/embeddedchart/73229e0a-a359-4a5f-a240-43d2f5f4ecd3" id="AUD4I_xHddUV"></iframe></div>
-
+        <p>I built this package for compatibility with <a href="https://www.chess.com/" target="_blank" rel="external">chess.com</a>, so contact me if you want me to use it for other sources. Everything required for this demo can be found in <a href="https://github.com/brantmerrell/chessdoodles/blob/master/chessDoodles.RData" target="_blank" rel="external">my chessDoodles workspace</a></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># clear workspace</span></span><br><span class="line">rm(list=ls())</span><br><span class="line"></span><br><span class="line"><span class="comment"># load workspace</span></span><br><span class="line">load(<span class="string">"chessDoodles.RData"</span>)</span><br></pre></td></tr></table></figure>
+<p>A link to a chess.com game always ends with a game ID. Here are two examples:</p>
+<ul>
+<li><a href="https://www.chess.com/echess/game?id=127609996" target="_blank" rel="external">https://www.chess.com/echess/game?id=127609996</a></li>
+<li><a href="https://www.chess.com/echess/game?id=131764454" target="_blank" rel="external">https://www.chess.com/echess/game?id=131764454</a></li>
+</ul>
+<p>So the ID of the game to assess can be used to construct the link to the game.</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">linkIDs &lt;- c(<span class="number">127609996</span>, <span class="number">131764454</span>)</span><br><span class="line"></span><br><span class="line">Links &lt;- paste(<span class="string">"chess.com/echess/game?id="</span>,</span><br><span class="line">               linkIDs,</span><br><span class="line">               sep = <span class="string">""</span>)</span><br><span class="line">Links</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">## [1] &quot;chess.com/echess/game?id=127609996&quot;</span><br><span class="line">## [2] &quot;chess.com/echess/game?id=131764454&quot;</span><br></pre></td></tr></table></figure>
+<p>These games can be viewed publicly, but scraping the <a href="https://en.wikipedia.org/wiki/Portable_Game_Notation" target="_blank" rel="external">pgn</a> for each requires a username and password. I think it’s easiest to embed the password into the link with the format <em>“<a href="http://username:password@chess.com/" target="_blank" rel="external">http://username:password@chess.com/</a>…”</em>.</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># store username and password</span></span><br><span class="line">Username &lt;- <span class="string">"thinkboolean"</span></span><br><span class="line">Password &lt;- <span class="string">"blogChess"</span> <span class="comment"># counting on you not to abuse this; feel free to contact me for details</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># finish constructing links</span></span><br><span class="line">Links &lt;- paste(<span class="string">"http://"</span>,</span><br><span class="line">               Username,</span><br><span class="line">               <span class="string">":"</span>,</span><br><span class="line">               Password,</span><br><span class="line">               <span class="string">"@"</span>,</span><br><span class="line">               Links, </span><br><span class="line">               sep = <span class="string">""</span>)</span><br><span class="line">Links</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">## [1] &quot;http://thinkboolean:blogChess@chess.com/echess/game?id=127609996&quot;</span><br><span class="line">## [2] &quot;http://thinkboolean:blogChess@chess.com/echess/game?id=131764454&quot;</span><br></pre></td></tr></table></figure>
+<p>The <em>rawToTidy</em> function scrapes the title and pgn of a chessLink.</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">games &lt;- rawToTidy(Links[<span class="number">1</span>])</span><br><span class="line"><span class="keyword">for</span>(Link <span class="keyword">in</span> Links[-<span class="number">1</span>])&#123;</span><br><span class="line">  games &lt;- rbind(games, rawToTidy(Link))</span><br><span class="line">&#125;</span><br><span class="line">games</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">##                                                   Title</span><br><span class="line">## 1 thinkboolean vs risoarcher - Online Chess - Chess.com</span><br><span class="line">## 2 risoarcher vs thinkboolean - Online Chess - Chess.com</span><br><span class="line">##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         pgn</span><br><span class="line">## 1 1.e4 e5 2.Qf3 Nc6 3.b3 Nf6 4.Nc3 d6 5.Bc4 Nd4 6.Qd3 Bg4 7.Nge2 Bxe2 8.Nxe2 Nxe2 9.Qxe2 Be7 10.Qf3 O-O 11.Bb2 c5 12.O-O Qd7 13.a4 a6 14.Rfe1 b5 15.axb5 axb5 16.Rxa8 Rxa8 17.h4 Qg4 18.Bd5 Qxf3 19.gxf3 Nxd5 20.exd5 Bxh4 21.Re4 Bg5 22.d3 Ra2 23.Bc3 Bf6 24.Re2 g5 25.Kg2 Kg7 26.Be1 h5 27.Kg3 Kg6 28.b4 c4 29.dxc4 bxc4 30.b5 Rb2 31.Re4 Rxb5 32.Rxc4 Rxd5 33.Bb4 Rd4 34.Rxd4 exd4 35.Bxd6 Kf5 36.Bb4 Be5 37.Kg2 Kf4 38.Bd2 Kf5 39.Kh3 f6 40.Kg2 Bf4 41.Bb4 Be5 42.Kf1 g4 43.fxg4 hxg4 44.Ke2 Ke4 45.Kd1</span><br><span class="line">## 2                                                                                                                                                                                                                                                                                                                                                                                                         1.e4 e5 2.f4 exf4 3.d4 Qe7 4.Bxf4 Qxe4 5.Qe2 Qxe2 6.Bxe2 d6 7.Nf3 Nc6 8.a3 Nf6 9.Nc3 Bf5 10.O-O-O</span><br></pre></td></tr></table></figure>
+<p>This provides a data frame in which each row is a game. The <em>tidyToPgn</em> function can split a game into a move-by-move data frame. </p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># first game:</span></span><br><span class="line">moves &lt;- tidyToPgn(tidyDF = games, n=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># other games:</span></span><br><span class="line"><span class="keyword">for</span>(n <span class="keyword">in</span> <span class="number">2</span>:length(games))&#123;</span><br><span class="line">  moves &lt;- rbind(moves, tidyToPgn(tidyDF = games, n = n))</span><br><span class="line">&#125;</span><br><span class="line">head(moves)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">##      gameID  pgn      </span><br><span class="line">## [1,] &quot;beta1&quot; &quot;1.e4&quot;   </span><br><span class="line">## [2,] &quot;beta1&quot; &quot;1...e5&quot; </span><br><span class="line">## [3,] &quot;beta1&quot; &quot;2.Qf3&quot;  </span><br><span class="line">## [4,] &quot;beta1&quot; &quot;2...Nc6&quot;</span><br><span class="line">## [5,] &quot;beta1&quot; &quot;3.b3&quot;   </span><br><span class="line">## [6,] &quot;beta1&quot; &quot;3...Nf6&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tail(moves)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">##        gameID  pgn       </span><br><span class="line">## [103,] &quot;beta2&quot; &quot;7...Nc6&quot; </span><br><span class="line">## [104,] &quot;beta2&quot; &quot;8.a3&quot;    </span><br><span class="line">## [105,] &quot;beta2&quot; &quot;8...Nf6&quot; </span><br><span class="line">## [106,] &quot;beta2&quot; &quot;9.Nc3&quot;   </span><br><span class="line">## [107,] &quot;beta2&quot; &quot;9...Bf5&quot; </span><br><span class="line">## [108,] &quot;beta2&quot; &quot;10.O-O-O&quot;</span><br></pre></td></tr></table></figure>
+<p>It avoids ambiguity between white and black moves by giving white moves a single dot, “.”, and black moves three dots, “…”.</p>
 
       
     </div>
@@ -128,12 +148,12 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/blog/2014/11/01/bankerdoodle/fdic-old-sql-flow/" data-id="cim0zwg1q000ganxvkjzdshcq" class="article-share-link">
+      <a data-url="http://yoursite.com/blog/blog/2016/04/07/r-packages/getting chess data/" data-id="cimqnqmjg00018wxvbno0gd5z" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/FDIC/">FDIC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Process/">Process</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SQL/">SQL</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Analytics/">Analytics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Chess/">Chess</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/R-Packages/">R Packages</a></li></ul>
 
 
     </footer>
@@ -143,16 +163,16 @@
 <ul id="article-nav" class="nav nav-pills nav-justified">
   
   <li role="presentation">
-    <a href="/blog/2014/11/01/tidbits/git-workflow/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/2016/04/07/r-packages/keeping track of chess positions/" id="article-nav-older" class="article-nav-link-wrap">
       <i class="fa fa-chevron-left pull-left"></i>
-      <span class="article-nav-link-title">Git Workflow</span>
+      <span class="article-nav-link-title">How can chess positions be kept track of?</span>
     </a>
   </li>
   
   
   <li role="presentation">
-    <a href="/blog/2014/11/01/techsketch/dynamic-grid-layout/" id="article-nav-newer" class="article-nav-link-wrap">
-      <span class="article-nav-link-title">Dynamic Grid Layout</span>
+    <a href="/blog/2017/03/14/bankerdoodle/bankerdoodle-intro/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">BankerDoodle Intro</span>
       <i class="fa fa-chevron-right pull-right"></i>
     </a>
   </li>

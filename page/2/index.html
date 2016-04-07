@@ -84,13 +84,13 @@
         <div class="col-sm-8 blog-main">
           
   
-    <article id="post-tidbits/costs-of-change-understanding" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-tidbits/webpack-setup" class="article article-type-post" itemscope itemprop="blogPost">
 
   <header class="article-header">
     
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/2016/03/14/tidbits/costs-of-change-understanding/">Cost of Change vs. Cost of Understanding</a>
+      <a class="article-title" href="/blog/2016/03/22/tidbits/webpack-setup/">Webpack Setup</a>
     </h1>
   
 
@@ -99,7 +99,123 @@
 
   <div class="article-meta">
     <div class="article-datetime">
-  <a href="/blog/2016/03/14/tidbits/costs-of-change-understanding/" class="article-date"><time datetime="2016-03-14T10:50:08.000Z" itemprop="datePublished">2016-03-14</time></a>
+  <a href="/blog/2016/03/22/tidbits/webpack-setup/" class="article-date"><time datetime="2016-03-22T10:50:08.000Z" itemprop="datePublished">2016-03-22</time></a>
+</div>
+
+    
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/TidBits/">TidBits</a>
+  </div>
+
+
+  </div>
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="Webpack-Notes"><a href="#Webpack-Notes" class="headerlink" title="Webpack Notes"></a>Webpack Notes</h4><p>There are <em>many</em> options for using webpack. These notes won’t be an exhaustive treatise on the subject, but merely cover how to implement webpack for my usage current scenario, namely, the <a href="https://github.com/datadoodler/datadoodler-admin-dashboard">DataDoodler Administration Dashboard</a>.</p>
+<h4 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h4><p>Basic webpack, and (optionally) the dev server, which provides a basic express app.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm-install --save-dev webpack, webpack-dev-server</span><br></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a class="btn btn-primary" href="/blog/2016/03/22/tidbits/webpack-setup/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+
+    
+
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/blog/blog/2016/03/22/tidbits/webpack-setup/" data-id="cimeoj3nm0000nsxvz2wfnbs2" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Webpack/">Webpack</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="false-hello-world" class="article article-type-false" itemscope itemprop="blogPost">
+
+  <header class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2016/03/18/hello-world/">Hello World</a>
+    </h1>
+  
+
+
+  </header>
+
+  <div class="article-meta">
+    <div class="article-datetime">
+  <a href="/blog/2016/03/18/hello-world/" class="article-date"><time datetime="2016-03-18T10:15:09.000Z" itemprop="datePublished">2016-03-18</time></a>
+</div>
+
+    
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/Tidbits/">Tidbits</a>
+  </div>
+
+
+  </div>
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.<br>
+        
+          <p class="article-more-link">
+            <a class="btn btn-primary" href="/blog/2016/03/18/hello-world/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+
+    
+
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/blog/blog/2016/03/18/hello-world/" data-id="cim0zwg0x0004anxvmhsixhao" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-tidbits/unit-testing-angular-apps" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <header class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2016/03/14/tidbits/unit-testing-angular-apps/">Unit Testing Angular Apps</a>
+    </h1>
+  
+
+
+  </header>
+
+  <div class="article-meta">
+    <div class="article-datetime">
+  <a href="/blog/2016/03/14/tidbits/unit-testing-angular-apps/" class="article-date"><time datetime="2016-03-14T10:50:08.000Z" itemprop="datePublished">2016-03-14</time></a>
 </div>
 
     <div class="article-author">Kent Merrell</div>
@@ -114,11 +230,10 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <p>There are costs associated with how you write code (the patterns you utilize). Highly abstract code that relies on a high degree of inheritance, factories, and dependency injection is easier to change, but harder to understand.</p>
-<p>Code that is less abstract is more likely to break something somewhere when you change it. Though it is harder to change, it is easier to understand.</p>
+        <h4 id="A-document-I-authored-to-get-the-team-all-on-the-same-page-for-unit-testing"><a href="#A-document-I-authored-to-get-the-team-all-on-the-same-page-for-unit-testing" class="headerlink" title="A document I authored to get the team all on the same page for unit testing."></a>A document I authored to get the team all on the same page for unit testing.</h4><p>(Use the zoom button to read. Also, notice the page tabs.)<br>
         
           <p class="article-more-link">
-            <a class="btn btn-primary" href="/blog/2016/03/14/tidbits/costs-of-change-understanding/#more">Read More</a>
+            <a class="btn btn-primary" href="/blog/2016/03/14/tidbits/unit-testing-angular-apps/#more">Read More</a>
           </p>
         
       
@@ -127,12 +242,12 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/blog/2016/03/14/tidbits/costs-of-change-understanding/" data-id="cim0zwg3c001eanxv53zfg28a" class="article-share-link">
+      <a data-url="http://yoursite.com/blog/blog/2016/03/14/tidbits/unit-testing-angular-apps/" data-id="cim0zwg3g001hanxv7vib31gv" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Architecture/">Architecture</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Maintenance/">Maintenance</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Angular/">Angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Jasmine/">Jasmine</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Unit-Testing/">Unit Testing</a></li></ul>
 
 
     </footer>
@@ -201,6 +316,65 @@
 
 
   
+    <article id="post-tidbits/costs-of-change-understanding" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <header class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2016/03/14/tidbits/costs-of-change-understanding/">Cost of Change vs. Cost of Understanding</a>
+    </h1>
+  
+
+
+  </header>
+
+  <div class="article-meta">
+    <div class="article-datetime">
+  <a href="/blog/2016/03/14/tidbits/costs-of-change-understanding/" class="article-date"><time datetime="2016-03-14T10:50:08.000Z" itemprop="datePublished">2016-03-14</time></a>
+</div>
+
+    <div class="article-author">Kent Merrell</div>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/Tidbits/">Tidbits</a>
+  </div>
+
+
+  </div>
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>There are costs associated with how you write code (the patterns you utilize). Highly abstract code that relies on a high degree of inheritance, factories, and dependency injection is easier to change, but harder to understand.</p>
+<p>Code that is less abstract is more likely to break something somewhere when you change it. Though it is harder to change, it is easier to understand.</p>
+        
+          <p class="article-more-link">
+            <a class="btn btn-primary" href="/blog/2016/03/14/tidbits/costs-of-change-understanding/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+
+    
+
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/blog/blog/2016/03/14/tidbits/costs-of-change-understanding/" data-id="cim0zwg3c001eanxv53zfg28a" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Architecture/">Architecture</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Maintenance/">Maintenance</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-tidbits/test-classes-should-be-public" class="article article-type-post" itemscope itemprop="blogPost">
 
   <header class="article-header">
@@ -249,64 +423,6 @@
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Notes/">Notes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Unit-Testing/">Unit Testing</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Visual-Studio/">Visual Studio</a></li></ul>
-
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-tidbits/unit-testing-angular-apps" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <header class="article-header">
-    
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2016/03/14/tidbits/unit-testing-angular-apps/">Unit Testing Angular Apps</a>
-    </h1>
-  
-
-
-  </header>
-
-  <div class="article-meta">
-    <div class="article-datetime">
-  <a href="/blog/2016/03/14/tidbits/unit-testing-angular-apps/" class="article-date"><time datetime="2016-03-14T10:50:08.000Z" itemprop="datePublished">2016-03-14</time></a>
-</div>
-
-    <div class="article-author">Kent Merrell</div>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/Tidbits/">Tidbits</a>
-  </div>
-
-
-  </div>
-  <div class="article-inner">
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="A-document-I-authored-to-get-the-team-all-on-the-same-page-for-unit-testing"><a href="#A-document-I-authored-to-get-the-team-all-on-the-same-page-for-unit-testing" class="headerlink" title="A document I authored to get the team all on the same page for unit testing."></a>A document I authored to get the team all on the same page for unit testing.</h4><p>(Use the zoom button to read. Also, notice the page tabs.)<br>
-        
-          <p class="article-more-link">
-            <a class="btn btn-primary" href="/blog/2016/03/14/tidbits/unit-testing-angular-apps/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-
-    
-
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/blog/2016/03/14/tidbits/unit-testing-angular-apps/" data-id="cim0zwg3g001hanxv7vib31gv" class="article-share-link">
-        <i class="fa fa-share"></i> Share
-      </a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Angular/">Angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Jasmine/">Jasmine</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Unit-Testing/">Unit Testing</a></li></ul>
 
 
     </footer>
@@ -438,64 +554,6 @@
 
 
   
-    <article id="post-bankerdoodle/multiple-party-dev-integration" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <header class="article-header">
-    
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2014/11/01/bankerdoodle/multiple-party-dev-integration/">Multiple Party Development Integration</a>
-    </h1>
-  
-
-
-  </header>
-
-  <div class="article-meta">
-    <div class="article-datetime">
-  <a href="/blog/2014/11/01/bankerdoodle/multiple-party-dev-integration/" class="article-date"><time datetime="2014-11-01T10:50:08.000Z" itemprop="datePublished">2014-11-01</time></a>
-</div>
-
-    <div class="article-author">Kent Merrell</div>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/BankerDoodle/">BankerDoodle</a>
-  </div>
-
-
-  </div>
-  <div class="article-inner">
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>With a well-defined api, it is possible to have several parties (open source <em>or</em> proprietary like BankerDoodle) develop applications on a single open source platform (DataDoodler).</p>
-        
-          <p class="article-more-link">
-            <a class="btn btn-primary" href="/blog/2014/11/01/bankerdoodle/multiple-party-dev-integration/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-
-    
-
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/blog/2014/11/01/bankerdoodle/multiple-party-dev-integration/" data-id="cim0zwg1z000kanxvn3rzp1za" class="article-share-link">
-        <i class="fa fa-share"></i> Share
-      </a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Architecture/">Architecture</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/DataDoodler/">DataDoodler</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Web-Api/">Web Api</a></li></ul>
-
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
     <article id="post-techsketch/d83-management-tools" class="article article-type-post" itemscope itemprop="blogPost">
 
   <header class="article-header">
@@ -554,13 +612,13 @@
 
 
   
-    <article id="post-bankerdoodle/fdic-old-sql-flow" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-bankerdoodle/multiple-party-dev-integration" class="article article-type-post" itemscope itemprop="blogPost">
 
   <header class="article-header">
     
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/2014/11/01/bankerdoodle/fdic-old-sql-flow/">FDIC Old SQL flow</a>
+      <a class="article-title" href="/blog/2014/11/01/bankerdoodle/multiple-party-dev-integration/">Multiple Party Development Integration</a>
     </h1>
   
 
@@ -569,7 +627,7 @@
 
   <div class="article-meta">
     <div class="article-datetime">
-  <a href="/blog/2014/11/01/bankerdoodle/fdic-old-sql-flow/" class="article-date"><time datetime="2014-11-01T10:50:08.000Z" itemprop="datePublished">2014-11-01</time></a>
+  <a href="/blog/2014/11/01/bankerdoodle/multiple-party-dev-integration/" class="article-date"><time datetime="2014-11-01T10:50:08.000Z" itemprop="datePublished">2014-11-01</time></a>
 </div>
 
     <div class="article-author">Kent Merrell</div>
@@ -584,11 +642,10 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <p>An early approach to working with FDIC data was to put it all in a SQL database. The idea was to use dynamic sql to build tables with only the columns necessary for the current study. This approach was doomed by in static nature of sql tables and the continual need to regenerate DDL and load data.</p>
-<p>The new approach is centered on DynamodDb.</p>
+        <p>With a well-defined api, it is possible to have several parties (open source <em>or</em> proprietary like BankerDoodle) develop applications on a single open source platform (DataDoodler).</p>
         
           <p class="article-more-link">
-            <a class="btn btn-primary" href="/blog/2014/11/01/bankerdoodle/fdic-old-sql-flow/#more">Read More</a>
+            <a class="btn btn-primary" href="/blog/2014/11/01/bankerdoodle/multiple-party-dev-integration/#more">Read More</a>
           </p>
         
       
@@ -597,70 +654,12 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/blog/2014/11/01/bankerdoodle/fdic-old-sql-flow/" data-id="cim0zwg1q000ganxvkjzdshcq" class="article-share-link">
+      <a data-url="http://yoursite.com/blog/blog/2014/11/01/bankerdoodle/multiple-party-dev-integration/" data-id="cim0zwg1z000kanxvn3rzp1za" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/FDIC/">FDIC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Process/">Process</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SQL/">SQL</a></li></ul>
-
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-tidbits/git-workflow" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <header class="article-header">
-    
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2014/11/01/tidbits/git-workflow/">Git Workflow</a>
-    </h1>
-  
-
-
-  </header>
-
-  <div class="article-meta">
-    <div class="article-datetime">
-  <a href="/blog/2014/11/01/tidbits/git-workflow/" class="article-date"><time datetime="2014-11-01T10:50:08.000Z" itemprop="datePublished">2014-11-01</time></a>
-</div>
-
-    
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/Tidbits/">Tidbits</a>
-  </div>
-
-
-  </div>
-  <div class="article-inner">
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>How does code get from a developer’s machine through all the steps of testing and integration and deployment? A well-defined process flow is essential. Here are a couple examples of flows I designed and implemented.<br>
-        
-          <p class="article-more-link">
-            <a class="btn btn-primary" href="/blog/2014/11/01/tidbits/git-workflow/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-
-    
-
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/blog/2014/11/01/tidbits/git-workflow/" data-id="cim0zwg3i001janxvekntc61v" class="article-share-link">
-        <i class="fa fa-share"></i> Share
-      </a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Git-Workflow/">Git Workflow</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Architecture/">Architecture</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/DataDoodler/">DataDoodler</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Web-Api/">Web Api</a></li></ul>
 
 
     </footer>
@@ -684,7 +683,7 @@
           
   <div class="sidebar-module sidebar-module-inset">
   <h4>About</h4>
-  <p>Making people smarter (ourselves included). </p>
+  <p>Kent and Josh Merrell are a father/son team who believe the world is a better place when knowledge is freely and openly shared.</p>
 
 </div>
 
@@ -692,7 +691,7 @@
   
   <div class="sidebar-module">
     <h4>Categories</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/categories/BankerDoodle/">BankerDoodle</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/categories/DataDoodler/">DataDoodler</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/categories/R-Packages/">R Packages</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/categories/Tech-Sketch/">Tech Sketch</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/categories/TidBits/">TidBits</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/categories/Tidbits/">Tidbits</a><span class="sidebar-module-list-count">6</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/categories/BankerDoodle/">BankerDoodle</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/categories/DataDoodler/">DataDoodler</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/categories/R-Packages/">R Packages</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/categories/Tech-Sketch/">Tech Sketch</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/categories/TidBits/">TidBits</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/categories/Tidbits/">Tidbits</a><span class="sidebar-module-list-count">6</span></li></ul>
   </div>
 
 
@@ -700,7 +699,7 @@
   
   <div class="sidebar-module">
     <h4>Tags</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/AWS/">AWS</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Analytics/">Analytics</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Angular/">Angular</a><span class="sidebar-module-list-count">6</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Angular-ui/">Angular-ui</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Architecture/">Architecture</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Asynchronous/">Asynchronous</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/BankerDoodle/">BankerDoodle</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Bootstrap/">Bootstrap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Chess/">Chess</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Configuration/">Configuration</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/DataDoodler/">DataDoodler</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Directives/">Directives</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/ECMAScript-6/">ECMAScript 6</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/ETL/">ETL</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/FDIC/">FDIC</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Git/">Git</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Git-Workflow/">Git Workflow</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Jasmine/">Jasmine</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/JavaScript/">JavaScript</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Maintenance/">Maintenance</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/NPM/">NPM</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/NeDB/">NeDB</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Node/">Node</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Notes/">Notes</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Plans/">Plans</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Process/">Process</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Project-Management/">Project Management</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Project-Setup/">Project Setup</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Promises/">Promises</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Query-Notation/">Query Notation</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/R-Packages/">R Packages</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Requirements/">Requirements</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Roadmap/">Roadmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/SQL/">SQL</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/TDD/">TDD</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Unit-Testing/">Unit Testing</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Visual-Studio/">Visual Studio</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Wallaby/">Wallaby</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Web-Api/">Web Api</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Webpack/">Webpack</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Wireframes/">Wireframes</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/rzslider/">rzslider</a><span class="sidebar-module-list-count">1</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/AWS/">AWS</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Analytics/">Analytics</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Angular/">Angular</a><span class="sidebar-module-list-count">6</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Angular-ui/">Angular-ui</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Architecture/">Architecture</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Asynchronous/">Asynchronous</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/BankerDoodle/">BankerDoodle</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Bootstrap/">Bootstrap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Chess/">Chess</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Configuration/">Configuration</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/DataDoodler/">DataDoodler</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Directives/">Directives</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/ECMAScript-6/">ECMAScript 6</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/ETL/">ETL</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/FDIC/">FDIC</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Git/">Git</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Git-Workflow/">Git Workflow</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Jasmine/">Jasmine</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/JavaScript/">JavaScript</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Maintenance/">Maintenance</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/NPM/">NPM</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/NeDB/">NeDB</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Node/">Node</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Notes/">Notes</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Plans/">Plans</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Process/">Process</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Project-Management/">Project Management</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Project-Setup/">Project Setup</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Promises/">Promises</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Query-Notation/">Query Notation</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/R-Packages/">R Packages</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Requirements/">Requirements</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Roadmap/">Roadmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/SQL/">SQL</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/TDD/">TDD</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Unit-Testing/">Unit Testing</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Visual-Studio/">Visual Studio</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Wallaby/">Wallaby</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Web-Api/">Web Api</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Webpack/">Webpack</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Wireframes/">Wireframes</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/rzslider/">rzslider</a><span class="sidebar-module-list-count">1</span></li></ul>
   </div>
 
 
@@ -709,7 +708,7 @@
   <div class="sidebar-module">
     <h4>Tag Cloud</h4>
     <p class="tagcloud">
-      <a href="/blog/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/blog/tags/Analytics/" style="font-size: 10px;">Analytics</a> <a href="/blog/tags/Angular/" style="font-size: 20px;">Angular</a> <a href="/blog/tags/Angular-ui/" style="font-size: 10px;">Angular-ui</a> <a href="/blog/tags/Architecture/" style="font-size: 12.5px;">Architecture</a> <a href="/blog/tags/Asynchronous/" style="font-size: 12.5px;">Asynchronous</a> <a href="/blog/tags/BankerDoodle/" style="font-size: 17.5px;">BankerDoodle</a> <a href="/blog/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/blog/tags/Chess/" style="font-size: 10px;">Chess</a> <a href="/blog/tags/Configuration/" style="font-size: 10px;">Configuration</a> <a href="/blog/tags/DataDoodler/" style="font-size: 10px;">DataDoodler</a> <a href="/blog/tags/Directives/" style="font-size: 10px;">Directives</a> <a href="/blog/tags/ECMAScript-6/" style="font-size: 10px;">ECMAScript 6</a> <a href="/blog/tags/ETL/" style="font-size: 10px;">ETL</a> <a href="/blog/tags/FDIC/" style="font-size: 15px;">FDIC</a> <a href="/blog/tags/Git/" style="font-size: 10px;">Git</a> <a href="/blog/tags/Git-Workflow/" style="font-size: 10px;">Git Workflow</a> <a href="/blog/tags/Jasmine/" style="font-size: 12.5px;">Jasmine</a> <a href="/blog/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/blog/tags/Maintenance/" style="font-size: 10px;">Maintenance</a> <a href="/blog/tags/NPM/" style="font-size: 10px;">NPM</a> <a href="/blog/tags/NeDB/" style="font-size: 10px;">NeDB</a> <a href="/blog/tags/Node/" style="font-size: 12.5px;">Node</a> <a href="/blog/tags/Notes/" style="font-size: 10px;">Notes</a> <a href="/blog/tags/Plans/" style="font-size: 15px;">Plans</a> <a href="/blog/tags/Process/" style="font-size: 10px;">Process</a> <a href="/blog/tags/Project-Management/" style="font-size: 10px;">Project Management</a> <a href="/blog/tags/Project-Setup/" style="font-size: 10px;">Project Setup</a> <a href="/blog/tags/Promises/" style="font-size: 12.5px;">Promises</a> <a href="/blog/tags/Query-Notation/" style="font-size: 10px;">Query Notation</a> <a href="/blog/tags/R-Packages/" style="font-size: 10px;">R Packages</a> <a href="/blog/tags/Requirements/" style="font-size: 12.5px;">Requirements</a> <a href="/blog/tags/Roadmap/" style="font-size: 10px;">Roadmap</a> <a href="/blog/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/blog/tags/TDD/" style="font-size: 10px;">TDD</a> <a href="/blog/tags/Unit-Testing/" style="font-size: 15px;">Unit Testing</a> <a href="/blog/tags/Visual-Studio/" style="font-size: 10px;">Visual Studio</a> <a href="/blog/tags/Wallaby/" style="font-size: 10px;">Wallaby</a> <a href="/blog/tags/Web-Api/" style="font-size: 10px;">Web Api</a> <a href="/blog/tags/Webpack/" style="font-size: 10px;">Webpack</a> <a href="/blog/tags/Wireframes/" style="font-size: 15px;">Wireframes</a> <a href="/blog/tags/rzslider/" style="font-size: 10px;">rzslider</a>
+      <a href="/blog/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/blog/tags/Analytics/" style="font-size: 16.67px;">Analytics</a> <a href="/blog/tags/Angular/" style="font-size: 20px;">Angular</a> <a href="/blog/tags/Angular-ui/" style="font-size: 10px;">Angular-ui</a> <a href="/blog/tags/Architecture/" style="font-size: 13.33px;">Architecture</a> <a href="/blog/tags/Asynchronous/" style="font-size: 13.33px;">Asynchronous</a> <a href="/blog/tags/BankerDoodle/" style="font-size: 16.67px;">BankerDoodle</a> <a href="/blog/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/blog/tags/Chess/" style="font-size: 16.67px;">Chess</a> <a href="/blog/tags/Configuration/" style="font-size: 10px;">Configuration</a> <a href="/blog/tags/DataDoodler/" style="font-size: 10px;">DataDoodler</a> <a href="/blog/tags/Directives/" style="font-size: 10px;">Directives</a> <a href="/blog/tags/ECMAScript-6/" style="font-size: 10px;">ECMAScript 6</a> <a href="/blog/tags/ETL/" style="font-size: 10px;">ETL</a> <a href="/blog/tags/FDIC/" style="font-size: 16.67px;">FDIC</a> <a href="/blog/tags/Git/" style="font-size: 10px;">Git</a> <a href="/blog/tags/Git-Workflow/" style="font-size: 10px;">Git Workflow</a> <a href="/blog/tags/Jasmine/" style="font-size: 13.33px;">Jasmine</a> <a href="/blog/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/blog/tags/Maintenance/" style="font-size: 10px;">Maintenance</a> <a href="/blog/tags/NPM/" style="font-size: 10px;">NPM</a> <a href="/blog/tags/NeDB/" style="font-size: 10px;">NeDB</a> <a href="/blog/tags/Node/" style="font-size: 13.33px;">Node</a> <a href="/blog/tags/Notes/" style="font-size: 10px;">Notes</a> <a href="/blog/tags/Plans/" style="font-size: 16.67px;">Plans</a> <a href="/blog/tags/Process/" style="font-size: 10px;">Process</a> <a href="/blog/tags/Project-Management/" style="font-size: 10px;">Project Management</a> <a href="/blog/tags/Project-Setup/" style="font-size: 10px;">Project Setup</a> <a href="/blog/tags/Promises/" style="font-size: 13.33px;">Promises</a> <a href="/blog/tags/Query-Notation/" style="font-size: 10px;">Query Notation</a> <a href="/blog/tags/R-Packages/" style="font-size: 16.67px;">R Packages</a> <a href="/blog/tags/Requirements/" style="font-size: 13.33px;">Requirements</a> <a href="/blog/tags/Roadmap/" style="font-size: 10px;">Roadmap</a> <a href="/blog/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/blog/tags/TDD/" style="font-size: 10px;">TDD</a> <a href="/blog/tags/Unit-Testing/" style="font-size: 16.67px;">Unit Testing</a> <a href="/blog/tags/Visual-Studio/" style="font-size: 10px;">Visual Studio</a> <a href="/blog/tags/Wallaby/" style="font-size: 10px;">Wallaby</a> <a href="/blog/tags/Web-Api/" style="font-size: 10px;">Web Api</a> <a href="/blog/tags/Webpack/" style="font-size: 10px;">Webpack</a> <a href="/blog/tags/Wireframes/" style="font-size: 16.67px;">Wireframes</a> <a href="/blog/tags/rzslider/" style="font-size: 10px;">rzslider</a>
     </p>
   </div>
 
@@ -717,7 +716,7 @@
   
   <div class="sidebar-module">
     <h4>Archives</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/archives/2017/03/">March 2017</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/archives/2016/04/">April 2016</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/archives/2016/03/">March 2016</a><span class="sidebar-module-list-count">11</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/archives/2015/11/">November 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/archives/2014/11/">November 2014</a><span class="sidebar-module-list-count">5</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/archives/2017/03/">March 2017</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/archives/2016/04/">April 2016</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/archives/2016/03/">March 2016</a><span class="sidebar-module-list-count">11</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/archives/2015/11/">November 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/archives/2014/11/">November 2014</a><span class="sidebar-module-list-count">5</span></li></ul>
   </div>
 
 
@@ -740,11 +739,11 @@
         </li>
       
         <li>
-          <a href="/blog/2016/04/01/tidbits/node-app-config/">Node App Configuration</a>
+          <a href="/blog/2016/04/07/r-packages/getting chess data/">How can the data for a game be obtained and neatened?</a>
         </li>
       
         <li>
-          <a href="/blog/2016/03/30/r-packages/chess-doodle/">Introduction to ChessDoodle Functions</a>
+          <a href="/blog/2016/04/07/r-packages/keeping track of chess positions/">How can chess positions be kept track of?</a>
         </li>
       
     </ul>

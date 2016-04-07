@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>FDIC Old SQL flow | The Data Doodle</title>
+  <title>How can chess positions be kept track of? | The Data Doodle</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="An early approach to working with FDIC data was to put it all in a SQL database. The idea was to use dynamic sql to build tables with only the columns necessary for the current study. This approach wa">
+  <meta name="description" content="I keep track of chess positions using a data frame of 64 variables, one for each square of the chessboard. An example of an empty chessboard can be generated with the empty function:
+1234load(&quot;chessDo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="FDIC Old SQL flow">
-<meta property="og:url" content="http://yoursite.com/blog/2014/11/01/bankerdoodle/fdic-old-sql-flow/index.html">
+<meta property="og:title" content="How can chess positions be kept track of?">
+<meta property="og:url" content="http://yoursite.com/blog/2016/04/07/r-packages/keeping track of chess positions/index.html">
 <meta property="og:site_name" content="The Data Doodle">
-<meta property="og:description" content="An early approach to working with FDIC data was to put it all in a SQL database. The idea was to use dynamic sql to build tables with only the columns necessary for the current study. This approach wa">
-<meta property="og:updated_time" content="2016-03-18T13:58:32.000Z">
+<meta property="og:description" content="I keep track of chess positions using a data frame of 64 variables, one for each square of the chessboard. An example of an empty chessboard can be generated with the empty function:
+1234load(&quot;chessDo">
+<meta property="og:updated_time" content="2016-04-07T19:05:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="FDIC Old SQL flow">
-<meta name="twitter:description" content="An early approach to working with FDIC data was to put it all in a SQL database. The idea was to use dynamic sql to build tables with only the columns necessary for the current study. This approach wa">
+<meta name="twitter:title" content="How can chess positions be kept track of?">
+<meta name="twitter:description" content="I keep track of chess positions using a data frame of 64 variables, one for each square of the chessboard. An example of an empty chessboard can be generated with the empty function:
+1234load(&quot;chessDo">
   
     <link rel="alternate" href="/atom.xml" title="The Data Doodle" type="application/atom+xml">
   
@@ -83,13 +86,13 @@
   <div class="container">
     <div class="row">
         <div class="col-sm-8 blog-main">
-          <article id="post-bankerdoodle/fdic-old-sql-flow" class="article article-type-post" itemscope itemprop="blogPost">
+          <article id="post-r-packages/keeping track of chess positions" class="article article-type-post" itemscope itemprop="blogPost">
 
   <header class="article-header">
     
   
     <h1 class="article-title" itemprop="name">
-      FDIC Old SQL flow
+      How can chess positions be kept track of?
     </h1>
   
 
@@ -98,13 +101,13 @@
 
   <div class="article-meta">
     <div class="article-datetime">
-  <a href="/blog/2014/11/01/bankerdoodle/fdic-old-sql-flow/" class="article-date"><time datetime="2014-11-01T10:50:08.000Z" itemprop="datePublished">2014-11-01</time></a>
+  <a href="/blog/2016/04/07/r-packages/keeping track of chess positions/" class="article-date"><time datetime="2016-04-07T04:00:00.000Z" itemprop="datePublished">2016-04-07</time></a>
 </div>
 
-    <div class="article-author">Kent Merrell</div>
+    <div class="article-author">Josh Merrell</div>
     
   <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/BankerDoodle/">BankerDoodle</a>
+    <a class="article-category-link" href="/blog/categories/R-Packages/">R Packages</a>
   </div>
 
 
@@ -113,11 +116,16 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <p>An early approach to working with FDIC data was to put it all in a SQL database. The idea was to use dynamic sql to build tables with only the columns necessary for the current study. This approach was doomed by in static nature of sql tables and the continual need to regenerate DDL and load data.</p>
-<p>The new approach is centered on DynamodDb.</p>
-<a id="more"></a>
- <div style="width: 600px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:600px; height:480px" src="https://www.lucidchart.com/documents/embeddedchart/73229e0a-a359-4a5f-a240-43d2f5f4ecd3" id="AUD4I_xHddUV"></iframe></div>
-
+        <p>I keep track of chess positions using a data frame of 64 variables, one for each square of the chessboard. An example of an empty chessboard can be generated with the <em>empty</em> function:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">load(<span class="string">"chessDoodles.RData"</span>)</span><br><span class="line"></span><br><span class="line">position &lt;- empty(gameName = <span class="string">"example"</span>)</span><br><span class="line">position</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">##               a8 a7 a6 a5 a4 a3 a2 a1 b8 b7 b6 b5 b4 b3 b2 b1 c8 c7 c6 c5</span><br><span class="line">## example_empty NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA</span><br><span class="line">##               c4 c3 c2 c1 d8 d7 d6 d5 d4 d3 d2 d1 e8 e7 e6 e5 e4 e3 e2 e1</span><br><span class="line">## example_empty NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA</span><br><span class="line">##               f8 f7 f6 f5 f4 f3 f2 f1 g8 g7 g6 g5 g4 g3 g2 g1 h8 h7 h6 h5</span><br><span class="line">## example_empty NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA</span><br><span class="line">##               h4 h3 h2 h1</span><br><span class="line">## example_empty NA NA NA NA</span><br></pre></td></tr></table></figure>
+<p>Note that columns are named after squares of the chessboard, and rows are named in gameName_move format. An example of a chessboard where the pieces have not been moved can be generated with the <em>setup</em> function (which internally calls the <em>empty</em> function):</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">position &lt;- setup(gameName = <span class="string">"game1"</span>)</span><br><span class="line">position[,c(<span class="string">"d1"</span>,<span class="string">"e1"</span>,<span class="string">"d8"</span>,<span class="string">"e8"</span>)]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">##                      d1         e1          d8         e8</span><br><span class="line">## game1_empty        &lt;NA&gt;       &lt;NA&gt;        &lt;NA&gt;       &lt;NA&gt;</span><br><span class="line">## game1_zero  white Queen white King black Queen black King</span><br></pre></td></tr></table></figure>
+<p>The position object is built row-by-row using the <em>newPosition</em> function.</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">newRow &lt;- newPosition(new_pgn = <span class="string">"game1_1.e4"</span>, startPosition = nrow(position))</span><br><span class="line">position &lt;- rbind(position,newRow)</span><br><span class="line">position[,c(<span class="string">"e2"</span>,<span class="string">"e4"</span>)]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">##                     e2         e4</span><br><span class="line">## game1_empty       &lt;NA&gt;       &lt;NA&gt;</span><br><span class="line">## game1_zero  white pawn       &lt;NA&gt;</span><br><span class="line">## game1_1.e4        &lt;NA&gt; white pawn</span><br></pre></td></tr></table></figure>
+<p>This <em>position</em> object is referenced by all the position-oriented functions I have written.</p>
 
       
     </div>
@@ -128,12 +136,12 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/blog/2014/11/01/bankerdoodle/fdic-old-sql-flow/" data-id="cim0zwg1q000ganxvkjzdshcq" class="article-share-link">
+      <a data-url="http://yoursite.com/blog/blog/2016/04/07/r-packages/keeping track of chess positions/" data-id="cimqnqmjb00008wxvawl8sm2p" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/FDIC/">FDIC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Process/">Process</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SQL/">SQL</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Analytics/">Analytics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Chess/">Chess</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/R-Packages/">R Packages</a></li></ul>
 
 
     </footer>
@@ -143,16 +151,16 @@
 <ul id="article-nav" class="nav nav-pills nav-justified">
   
   <li role="presentation">
-    <a href="/blog/2014/11/01/tidbits/git-workflow/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/2016/04/01/tidbits/node-app-config/" id="article-nav-older" class="article-nav-link-wrap">
       <i class="fa fa-chevron-left pull-left"></i>
-      <span class="article-nav-link-title">Git Workflow</span>
+      <span class="article-nav-link-title">Node App Configuration</span>
     </a>
   </li>
   
   
   <li role="presentation">
-    <a href="/blog/2014/11/01/techsketch/dynamic-grid-layout/" id="article-nav-newer" class="article-nav-link-wrap">
-      <span class="article-nav-link-title">Dynamic Grid Layout</span>
+    <a href="/blog/2016/04/07/r-packages/getting chess data/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">How can the data for a game be obtained and neatened?</span>
       <i class="fa fa-chevron-right pull-right"></i>
     </a>
   </li>
