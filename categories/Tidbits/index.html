@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Category: TidBits | The Data Doodle</title>
+  <title>Category: Tidbits | The Data Doodle</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Making the world smarter">
 <meta property="og:type" content="website">
 <meta property="og:title" content="The Data Doodle">
-<meta property="og:url" content="http://yoursite.com/blog/categories/TidBits/index.html">
+<meta property="og:url" content="http://yoursite.com/blog/categories/Tidbits/index.html">
 <meta property="og:site_name" content="The Data Doodle">
 <meta property="og:description" content="Making the world smarter">
 <meta name="twitter:card" content="summary">
@@ -100,6 +100,35 @@
     
   
     <h1 itemprop="name">
+      <a class="archive-article-title" href="/blog/2016/04/01/tidbits/node-app-config/">Node App Configuration</a>
+    </h1>
+  
+
+
+    <div class="article-datetime">
+  <a href="/blog/2016/04/01/tidbits/node-app-config/" class="archive-article-date"><time datetime="2016-04-01T10:50:08.000Z" itemprop="datePublished">April 1st</time></a>
+</div>
+
+  </header>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>Applications that are deployed to various physical and logical environments (AWS, Heroku, Dev, Prod, Local, Test, Debug, Language, TodayDate, etc…) will need a way to dynamically adapt to their current environment. The path to a file on AWS is definitely different than a path to a file on a disconnected development box.</p>
+<h3 id="A-note-about-supplying-credentials-in-an-application"><a href="#A-note-about-supplying-credentials-in-an-application" class="headerlink" title="A note about supplying credentials in an application -"></a>A note about supplying credentials in an application -</h3><p>Credentials for accessing outside resources (databases, s3 buckets, deployment services, etc…) should <em>not</em> be included in any source file (config or hardcoded in app) that will be checked-in to a source control system. </p>
+<h3 id="Config-File"><a href="#Config-File" class="headerlink" title="Config File"></a>Config File</h3><p>A smart module for handling config files is necessary. You can create your own, or just use one that has already been created and tested, like nodejs-config.<br><code>npm install nodejs-config</code></p>
+<h3 id="Environment-Variables"><a href="#Environment-Variables" class="headerlink" title="Environment Variables"></a>Environment Variables</h3><p>Sometimes, using environment variables is the way to go. Like when the application needs credentials data such as username and password. </p>
+
+    
+  </div>
+</article>
+
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <header class="archive-article-header">
+    
+  
+    <h1 itemprop="name">
       <a class="archive-article-title" href="/blog/2016/03/22/tidbits/webpack-setup/">Webpack Setup</a>
     </h1>
   
@@ -112,12 +141,174 @@
   </header>
   <div class="article-entry" itemprop="articleBody">
     
-    <h4 id="Webpack-Notes"><a href="#Webpack-Notes" class="headerlink" title="Webpack Notes"></a>Webpack Notes</h4><p>There are <em>many</em> options for using webpack. These notes won’t be an exhaustive treatise on the subject, but merely cover how to implement webpack for my usage current scenario, namely, the <a href="https://github.com/datadoodler/datadoodler-admin-dashboard">DataDoodler Administration Dashboard</a>.</p>
+    <p>Source: [<a href="https://github.com/datadoodler/ts-00-active-webpack.git">https://github.com/datadoodler/ts-00-active-webpack.git</a>]</p>
+<h4 id="Webpack-Notes"><a href="#Webpack-Notes" class="headerlink" title="Webpack Notes"></a>Webpack Notes</h4><p>There are <em>many</em> options for using webpack. These notes won’t be an exhaustive treatise on the subject, but merely cover how to implement webpack for my usage current scenario, namely, the <a href="https://github.com/datadoodler/datadoodler-admin-dashboard">DataDoodler Administration Dashboard</a>.</p>
 <h4 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h4><p>Basic webpack, and (optionally) the dev server, which provides a basic express app.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm-install --save-dev webpack, webpack-dev-server</span><br></pre></td></tr></table></figure>
     
     <p class="article-more-link">
       <a href="/blog/2016/03/22/tidbits/webpack-setup/#more">Read More</a>
+    </p>
+    
+    
+  </div>
+</article>
+
+  
+    
+    
+    <article class="archive-article archive-type-false">
+  <header class="archive-article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/blog/2016/03/18/hello-world/">Hello World</a>
+    </h1>
+  
+
+
+    <div class="article-datetime">
+  <a href="/blog/2016/03/18/hello-world/" class="archive-article-date"><time datetime="2016-03-18T10:15:09.000Z" itemprop="datePublished">March 18th</time></a>
+</div>
+
+  </header>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.<br>
+    
+    <p class="article-more-link">
+      <a href="/blog/2016/03/18/hello-world/#more">Read More</a>
+    </p>
+    
+    
+  </div>
+</article>
+
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <header class="archive-article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/blog/2016/03/14/tidbits/costs-of-change-understanding/">Cost of Change vs. Cost of Understanding</a>
+    </h1>
+  
+
+
+    <div class="article-datetime">
+  <a href="/blog/2016/03/14/tidbits/costs-of-change-understanding/" class="archive-article-date"><time datetime="2016-03-14T10:50:08.000Z" itemprop="datePublished">March 14th</time></a>
+</div>
+
+  </header>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>There are costs associated with how you write code (the patterns you utilize). Highly abstract code that relies on a high degree of inheritance, factories, and dependency injection is easier to change, but harder to understand.</p>
+<p>Code that is less abstract is more likely to break something somewhere when you change it. Though it is harder to change, it is easier to understand.</p>
+    
+    <p class="article-more-link">
+      <a href="/blog/2016/03/14/tidbits/costs-of-change-understanding/#more">Read More</a>
+    </p>
+    
+    
+  </div>
+</article>
+
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <header class="archive-article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/blog/2016/03/14/tidbits/test-classes-should-be-public/">Test Classes Should Be Public</a>
+    </h1>
+  
+
+
+    <div class="article-datetime">
+  <a href="/blog/2016/03/14/tidbits/test-classes-should-be-public/" class="archive-article-date"><time datetime="2016-03-14T10:50:08.000Z" itemprop="datePublished">March 14th</time></a>
+</div>
+
+  </header>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h4 id="When-creating-tests-in-Visual-Studio-the-test-class-should-be-made-public"><a href="#When-creating-tests-in-Visual-Studio-the-test-class-should-be-made-public" class="headerlink" title="When creating tests in Visual Studio, the test class should be made public."></a>When creating tests in Visual Studio, the test class should be made <em>public</em>.</h4><p>By default, when you add a new class in VS, it does NOT include the <em>public</em> decorator.<br>
+    
+    <p class="article-more-link">
+      <a href="/blog/2016/03/14/tidbits/test-classes-should-be-public/#more">Read More</a>
+    </p>
+    
+    
+  </div>
+</article>
+
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <header class="archive-article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/blog/2016/03/14/tidbits/unit-testing-angular-apps/">Unit Testing Angular Apps</a>
+    </h1>
+  
+
+
+    <div class="article-datetime">
+  <a href="/blog/2016/03/14/tidbits/unit-testing-angular-apps/" class="archive-article-date"><time datetime="2016-03-14T10:50:08.000Z" itemprop="datePublished">March 14th</time></a>
+</div>
+
+  </header>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h4 id="A-document-I-authored-to-get-the-team-all-on-the-same-page-for-unit-testing"><a href="#A-document-I-authored-to-get-the-team-all-on-the-same-page-for-unit-testing" class="headerlink" title="A document I authored to get the team all on the same page for unit testing."></a>A document I authored to get the team all on the same page for unit testing.</h4><p>(Use the zoom button to read. Also, notice the page tabs.)<br>
+    
+    <p class="article-more-link">
+      <a href="/blog/2016/03/14/tidbits/unit-testing-angular-apps/#more">Read More</a>
+    </p>
+    
+    
+  </div>
+</article>
+
+  
+    
+    
+      
+        </div></section>
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/blog/archives/2014" class="archive-year">2014</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <header class="archive-article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/blog/2014/11/01/tidbits/git-workflow/">Git Workflow</a>
+    </h1>
+  
+
+
+    <div class="article-datetime">
+  <a href="/blog/2014/11/01/tidbits/git-workflow/" class="archive-article-date"><time datetime="2014-11-01T10:50:08.000Z" itemprop="datePublished">November 1st</time></a>
+</div>
+
+  </header>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>How does code get from a developer’s machine through all the steps of testing and integration and deployment? A well-defined process flow is essential. Here are a couple examples of flows I designed and implemented.<br>
+    
+    <p class="article-more-link">
+      <a href="/blog/2014/11/01/tidbits/git-workflow/#more">Read More</a>
     </p>
     
     
@@ -145,7 +336,7 @@
   
   <div class="sidebar-module">
     <h4>Categories</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/categories/BankerDoodle/">BankerDoodle</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/categories/DataDoodler/">DataDoodler</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/categories/R-Packages/">R Packages</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/categories/Tech-Sketch/">Tech Sketch</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/categories/TidBits/">TidBits</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/categories/Tidbits/">Tidbits</a><span class="sidebar-module-list-count">6</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/categories/BankerDoodle/">BankerDoodle</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/categories/DataDoodler/">DataDoodler</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/categories/R-Packages/">R Packages</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/categories/Tech-Sketch/">Tech Sketch</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/categories/Tidbits/">Tidbits</a><span class="sidebar-module-list-count">7</span></li></ul>
   </div>
 
 
@@ -154,82 +345,6 @@
   <div class="sidebar-module">
     <h4>Tags</h4>
     <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/AWS/">AWS</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Analytics/">Analytics</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Angular/">Angular</a><span class="sidebar-module-list-count">6</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Angular-ui/">Angular-ui</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Architecture/">Architecture</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Asynchronous/">Asynchronous</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/BankerDoodle/">BankerDoodle</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Bootstrap/">Bootstrap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Chess/">Chess</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Configuration/">Configuration</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/DataDoodler/">DataDoodler</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Directives/">Directives</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/ECMAScript-6/">ECMAScript 6</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/ETL/">ETL</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/FDIC/">FDIC</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Git/">Git</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Git-Workflow/">Git Workflow</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Jasmine/">Jasmine</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/JavaScript/">JavaScript</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Maintenance/">Maintenance</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/NPM/">NPM</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/NeDB/">NeDB</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Node/">Node</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Notes/">Notes</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Plans/">Plans</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Process/">Process</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Project-Management/">Project Management</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Project-Setup/">Project Setup</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Promises/">Promises</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Query-Notation/">Query Notation</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/R-Packages/">R Packages</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Requirements/">Requirements</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Roadmap/">Roadmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/SQL/">SQL</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/TDD/">TDD</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Unit-Testing/">Unit Testing</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Visual-Studio/">Visual Studio</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Wallaby/">Wallaby</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Web-Api/">Web Api</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Webpack/">Webpack</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Wireframes/">Wireframes</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/rzslider/">rzslider</a><span class="sidebar-module-list-count">1</span></li></ul>
-  </div>
-
-
-
-  
-  <div class="sidebar-module">
-    <h4>Tag Cloud</h4>
-    <p class="tagcloud">
-      <a href="/blog/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/blog/tags/Analytics/" style="font-size: 16.67px;">Analytics</a> <a href="/blog/tags/Angular/" style="font-size: 20px;">Angular</a> <a href="/blog/tags/Angular-ui/" style="font-size: 10px;">Angular-ui</a> <a href="/blog/tags/Architecture/" style="font-size: 13.33px;">Architecture</a> <a href="/blog/tags/Asynchronous/" style="font-size: 13.33px;">Asynchronous</a> <a href="/blog/tags/BankerDoodle/" style="font-size: 16.67px;">BankerDoodle</a> <a href="/blog/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/blog/tags/Chess/" style="font-size: 16.67px;">Chess</a> <a href="/blog/tags/Configuration/" style="font-size: 10px;">Configuration</a> <a href="/blog/tags/DataDoodler/" style="font-size: 10px;">DataDoodler</a> <a href="/blog/tags/Directives/" style="font-size: 10px;">Directives</a> <a href="/blog/tags/ECMAScript-6/" style="font-size: 10px;">ECMAScript 6</a> <a href="/blog/tags/ETL/" style="font-size: 10px;">ETL</a> <a href="/blog/tags/FDIC/" style="font-size: 16.67px;">FDIC</a> <a href="/blog/tags/Git/" style="font-size: 10px;">Git</a> <a href="/blog/tags/Git-Workflow/" style="font-size: 10px;">Git Workflow</a> <a href="/blog/tags/Jasmine/" style="font-size: 13.33px;">Jasmine</a> <a href="/blog/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/blog/tags/Maintenance/" style="font-size: 10px;">Maintenance</a> <a href="/blog/tags/NPM/" style="font-size: 10px;">NPM</a> <a href="/blog/tags/NeDB/" style="font-size: 10px;">NeDB</a> <a href="/blog/tags/Node/" style="font-size: 13.33px;">Node</a> <a href="/blog/tags/Notes/" style="font-size: 10px;">Notes</a> <a href="/blog/tags/Plans/" style="font-size: 16.67px;">Plans</a> <a href="/blog/tags/Process/" style="font-size: 10px;">Process</a> <a href="/blog/tags/Project-Management/" style="font-size: 10px;">Project Management</a> <a href="/blog/tags/Project-Setup/" style="font-size: 10px;">Project Setup</a> <a href="/blog/tags/Promises/" style="font-size: 13.33px;">Promises</a> <a href="/blog/tags/Query-Notation/" style="font-size: 10px;">Query Notation</a> <a href="/blog/tags/R-Packages/" style="font-size: 16.67px;">R Packages</a> <a href="/blog/tags/Requirements/" style="font-size: 13.33px;">Requirements</a> <a href="/blog/tags/Roadmap/" style="font-size: 10px;">Roadmap</a> <a href="/blog/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/blog/tags/TDD/" style="font-size: 10px;">TDD</a> <a href="/blog/tags/Unit-Testing/" style="font-size: 16.67px;">Unit Testing</a> <a href="/blog/tags/Visual-Studio/" style="font-size: 10px;">Visual Studio</a> <a href="/blog/tags/Wallaby/" style="font-size: 10px;">Wallaby</a> <a href="/blog/tags/Web-Api/" style="font-size: 10px;">Web Api</a> <a href="/blog/tags/Webpack/" style="font-size: 10px;">Webpack</a> <a href="/blog/tags/Wireframes/" style="font-size: 16.67px;">Wireframes</a> <a href="/blog/tags/rzslider/" style="font-size: 10px;">rzslider</a>
-    </p>
-  </div>
-
-
-  
-  <div class="sidebar-module">
-    <h4>Archives</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/archives/2017/03/">March 2017</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/archives/2016/04/">April 2016</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/archives/2016/03/">March 2016</a><span class="sidebar-module-list-count">11</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/archives/2015/11/">November 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/archives/2014/11/">November 2014</a><span class="sidebar-module-list-count">5</span></li></ul>
-  </div>
-
-
-
-  
-  <div class="sidebar-module">
-    <h4>Recents</h4>
-    <ul class="sidebar-module-list">
-      
-        <li>
-          <a href="/blog/2017/03/24/bankerdoodle/fdic-sdi-manager/">FDIC SDI Manager</a>
-        </li>
-      
-        <li>
-          <a href="/blog/2017/03/15/datadoodler-intro/">DataDoodler Intro</a>
-        </li>
-      
-        <li>
-          <a href="/blog/2017/03/14/bankerdoodle/bankerdoodle-intro/">BankerDoodle Intro</a>
-        </li>
-      
-        <li>
-          <a href="/blog/2016/04/07/r-packages/getting chess data/">How can the data for a game be obtained and neatened?</a>
-        </li>
-      
-        <li>
-          <a href="/blog/2016/04/07/r-packages/keeping track of chess positions/">How can chess positions be kept track of?</a>
-        </li>
-      
-    </ul>
-  </div>
-
-
-
-        </div>
-    </div>
-  </div>
-  <footer class="blog-footer">
-  <div class="container">
-    <div id="footer-info" class="inner">
-      &copy; 2016 Kent Merrell<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-  
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-
-
-<script src="/blog/js/script.js"></script>
-
-</body>
-</html>
-e-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Web-Api/">Web Api</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Webpack/">Webpack</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/Wireframes/">Wireframes</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/blog/tags/rzslider/">rzslider</a><span class="sidebar-module-list-count">1</span></li></ul>
   </div>
 
 
