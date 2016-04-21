@@ -3,21 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>How can chess positions be kept track of? | The Data Doodle</title>
+  <title>Skills Demo - A Few Examples | The Data Doodle</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="I keep track of chess positions using a data frame of 64 variables, one for each square of the chessboard. An example of an empty chessboard can be generated with the empty function:
-1234load(&quot;chessDo">
+  <meta name="description" content="This document is intended to be a guided tour through some of my code. It will provide some insight into my skill set, coding style, and overall approach to developing apps. Scroll through this docuem">
 <meta property="og:type" content="article">
-<meta property="og:title" content="How can chess positions be kept track of?">
-<meta property="og:url" content="http://yoursite.com/blog/2016/04/07/r-packages/keeping track of chess positions/index.html">
+<meta property="og:title" content="Skills Demo - A Few Examples">
+<meta property="og:url" content="http://yoursite.com/blog/2016/04/21/tidbits/skills-demo/index.html">
 <meta property="og:site_name" content="The Data Doodle">
-<meta property="og:description" content="I keep track of chess positions using a data frame of 64 variables, one for each square of the chessboard. An example of an empty chessboard can be generated with the empty function:
-1234load(&quot;chessDo">
-<meta property="og:updated_time" content="2016-04-07T19:05:05.000Z">
+<meta property="og:description" content="This document is intended to be a guided tour through some of my code. It will provide some insight into my skill set, coding style, and overall approach to developing apps. Scroll through this docuem">
+<meta property="og:image" content="http://yoursite.com/blog/blog/static/TDD-Fdic.png">
+<meta property="og:image" content="http://yoursite.com/blog/blog/static/bloomingMenu2.gif">
+<meta property="og:image" content="http://yoursite.com/blog/blog/static/address-validation-directive-1.png">
+<meta property="og:image" content="http://yoursite.com/blog/blog/static/address-validation-directive-2.png">
+<meta property="og:image" content="http://yoursite.com/blog/blog/static/address-validation-directive-3.png">
+<meta property="og:updated_time" content="2016-04-21T15:59:19.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="How can chess positions be kept track of?">
-<meta name="twitter:description" content="I keep track of chess positions using a data frame of 64 variables, one for each square of the chessboard. An example of an empty chessboard can be generated with the empty function:
-1234load(&quot;chessDo">
+<meta name="twitter:title" content="Skills Demo - A Few Examples">
+<meta name="twitter:description" content="This document is intended to be a guided tour through some of my code. It will provide some insight into my skill set, coding style, and overall approach to developing apps. Scroll through this docuem">
+<meta name="twitter:image" content="http://yoursite.com/blog/blog/static/TDD-Fdic.png">
   
     <link rel="alternate" href="/atom.xml" title="The Data Doodle" type="application/atom+xml">
   
@@ -86,13 +89,13 @@
   <div class="container">
     <div class="row">
         <div class="col-sm-8 blog-main">
-          <article id="post-r-packages/keeping track of chess positions" class="article article-type-post" itemscope itemprop="blogPost">
+          <article id="post-tidbits/skills-demo" class="article article-type-post" itemscope itemprop="blogPost">
 
   <header class="article-header">
     
   
     <h1 class="article-title" itemprop="name">
-      How can chess positions be kept track of?
+      Skills Demo - A Few Examples
     </h1>
   
 
@@ -101,13 +104,13 @@
 
   <div class="article-meta">
     <div class="article-datetime">
-  <a href="/blog/2016/04/07/r-packages/keeping track of chess positions/" class="article-date"><time datetime="2016-04-07T04:00:00.000Z" itemprop="datePublished">2016-04-07</time></a>
+  <a href="/blog/2016/04/21/tidbits/skills-demo/" class="article-date"><time datetime="2016-04-21T10:50:08.000Z" itemprop="datePublished">2016-04-21</time></a>
 </div>
 
-    <div class="article-author">Josh Merrell</div>
+    <div class="article-author">Kent Merrell</div>
     
   <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/R-Packages/">R Packages</a>
+    <a class="article-category-link" href="/blog/categories/Tidbits/">Tidbits</a>
   </div>
 
 
@@ -116,16 +119,61 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <p>I keep track of chess positions using a data frame of 64 variables, one for each square of the chessboard. An example of an empty chessboard can be generated with the <em>empty</em> function:</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">load(<span class="string">"chessDoodles.RData"</span>)</span><br><span class="line"></span><br><span class="line">position &lt;- empty(gameName = <span class="string">"example"</span>)</span><br><span class="line">position</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">##               a8 a7 a6 a5 a4 a3 a2 a1 b8 b7 b6 b5 b4 b3 b2 b1 c8 c7 c6 c5</span><br><span class="line">## example_empty NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA</span><br><span class="line">##               c4 c3 c2 c1 d8 d7 d6 d5 d4 d3 d2 d1 e8 e7 e6 e5 e4 e3 e2 e1</span><br><span class="line">## example_empty NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA</span><br><span class="line">##               f8 f7 f6 f5 f4 f3 f2 f1 g8 g7 g6 g5 g4 g3 g2 g1 h8 h7 h6 h5</span><br><span class="line">## example_empty NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA</span><br><span class="line">##               h4 h3 h2 h1</span><br><span class="line">## example_empty NA NA NA NA</span><br></pre></td></tr></table></figure>
-<p>Note that columns are named after squares of the chessboard, and rows are named in gameName_move format. An example of a chessboard where the pieces have not been moved can be generated with the <em>setup</em> function (which internally calls the <em>empty</em> function):</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">position &lt;- setup(gameName = <span class="string">"game1"</span>)</span><br><span class="line">position[,c(<span class="string">"d1"</span>,<span class="string">"e1"</span>,<span class="string">"d8"</span>,<span class="string">"e8"</span>)]</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">##                      d1         e1          d8         e8</span><br><span class="line">## game1_empty        &lt;NA&gt;       &lt;NA&gt;        &lt;NA&gt;       &lt;NA&gt;</span><br><span class="line">## game1_zero  white Queen white King black Queen black King</span><br></pre></td></tr></table></figure>
-<p>The position object is built row-by-row using the <em>newPosition</em> function.</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">newRow &lt;- newPosition(new_pgn = <span class="string">"game1_1.e4"</span>, startPosition = nrow(position))</span><br><span class="line">position &lt;- rbind(position,newRow)</span><br><span class="line">position[,c(<span class="string">"e2"</span>,<span class="string">"e4"</span>)]</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">##                     e2         e4</span><br><span class="line">## game1_empty       &lt;NA&gt;       &lt;NA&gt;</span><br><span class="line">## game1_zero  white pawn       &lt;NA&gt;</span><br><span class="line">## game1_1.e4        &lt;NA&gt; white pawn</span><br></pre></td></tr></table></figure>
-<p>This <em>position</em> object is referenced by all the position-oriented functions I have written.</p>
+        <p>This document is intended to be a guided tour through some of my code. It will provide some insight into my skill set, coding style, and overall approach to developing apps. Scroll through this docuement to find the following examples:</p>
+<ul>
+<li>fdic-sdi-manager (node-based ETL with lots of cool es6 features)</li>
+<li>Blooming Menu Directive (angular directive, animation)</li>
+<li>Address Verification Directive (angular directive, promise-based DOM manipulation)</li>
+</ul>
+<a id="more"></a>
+<h1 id="Example-fdic-sdi-manager"><a href="#Example-fdic-sdi-manager" class="headerlink" title="Example: fdic-sdi-manager"></a>Example: fdic-sdi-manager</h1><p>The purpose of this project is to extract data from quarterly zip files and persist it to a nosql database in an ‘on-demand’ fashion. I don’t want to persist <em>all</em> the data, but I don’t know before-hand which variables I want to persist. </p>
+<h3 id="Source-code"><a href="#Source-code" class="headerlink" title="Source code:"></a>Source code:</h3><p><a href="https://github.com/datadoodler/fdic-sdi-manager.git" target="_blank" rel="external">https://github.com/datadoodler/fdic-sdi-manager.git</a> </p>
+<h3 id="Technical-highlights"><a href="#Technical-highlights" class="headerlink" title="Technical highlights:"></a>Technical highlights:</h3><ul>
+<li>nodejs</li>
+<li>tdd with mocha/chai/wallaby</li>
+<li>es6 classes</li>
+<li>es6 generators</li>
+<li>factory pattern</li>
+<li>nosql database</li>
+<li>npm package publish, consume</li>
+</ul>
+<p>I will provide an overview of the data then address each of the above highlights individually.</p>
+<h3 id="Data"><a href="#Data" class="headerlink" title="Data:"></a>Data:</h3><p>The FDIC releases data for public consumption in the form of quarterly zip files. Each zip file normally contains 65 .csv files. Each .csv file contains anywhere from 40 to 150 variables (columns) for approximately 8500 banks (rows).</p>
+<h3 id="NodeJS"><a href="#NodeJS" class="headerlink" title="NodeJS"></a>NodeJS</h3><p>I’m using node version 5.3.0, which has native support for all the es6 features I was compelled to use. Though this project is published to an npm repository it is not meant for general distribution and will be  consumed in a setting where I have explicit control of the node environment (namely, my own AWS EC2 instance).</p>
+<h3 id="tdd-with-mocha-chai-wallaby"><a href="#tdd-with-mocha-chai-wallaby" class="headerlink" title="tdd with mocha/chai/wallaby"></a>tdd with mocha/chai/wallaby</h3><p>I’m addicted to test-first development. It is how I know what to code, without getting too sidetracked (and overwhelmed) with “it <em>might</em> need to to <em>x</em> someday” mindset. It helps me organize my thoughts and more expeditiously arrive at an efficient architecture.</p>
+<p><img src="/blog/static/TDD-Fdic.png" alt=""></p>
+<h3 id="es6-classes"><a href="#es6-classes" class="headerlink" title="es6 classes"></a>es6 classes</h3><p>Yes, I know es6 classes are syntactic sugar, but I’m finding that it helps with conceptualizing underlying architecture.</p>
+<h4 id="FdicSdiManager-Class"><a href="#FdicSdiManager-Class" class="headerlink" title="FdicSdiManager Class"></a>FdicSdiManager Class</h4><ul>
+<li>this is the main entrypoint of the ETL application</li>
+<li>has a collection of FdicSdiQuarter instances</li>
+<li>controls instantiation of and comparison between quarterly data</li>
+</ul>
+<h4 id="FdicSdiQuarter-Class"><a href="#FdicSdiQuarter-Class" class="headerlink" title="FdicSdiQuarter Class"></a>FdicSdiQuarter Class</h4><ul>
+<li>properties for processing state (state is held in local nosql table)</li>
+<li>methods to extract zip file, reset, clean, and persist data</li>
+</ul>
+<h4 id="QDate-Class"><a href="#QDate-Class" class="headerlink" title="QDate Class"></a>QDate Class</h4><ul>
+<li>contains properties and methods neccessary for consistent naming conventions for handling quarterly datafiles, as well as an iteration mechanism to get QDate instances for the  next and previous quarters.</li>
+</ul>
+<h3 id="es6-generators"><a href="#es6-generators" class="headerlink" title="es6 generators"></a>es6 generators</h3><p>I use the factory pattern in conjunction with an es6 generator function to return an instance of FdicSdiQuarter with all it’s initial <em>asynchronous</em> properties filled. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">function *FdicSdiQuarter_factory(options) &#123;</span><br><span class="line">    </span><br><span class="line">    const date = new Date();</span><br><span class="line">    </span><br><span class="line">    try &#123;</span><br><span class="line">        options = resolveOptions(options);</span><br><span class="line"></span><br><span class="line">        var fdicSdiQuarter = new FdicSdiQuarter(options.year, options.quarter);</span><br><span class="line"></span><br><span class="line">        // GET INITIAL STATE - FILL ASYNC PROPERTIES FOR THIS INSTANCE</span><br><span class="line"></span><br><span class="line">        fdicSdiQuarter._successfulActions = yield database.getPersistedSuccessfulActions(options.year, options.quarter);</span><br><span class="line"></span><br><span class="line">        fdicSdiQuarter._csvFileMetadata = yield getCsvFileMetadata(options.year, options.quarter);</span><br><span class="line"></span><br><span class="line">        return fdicSdiQuarter;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    catch (e) &#123;</span><br><span class="line">        logger.error(&quot;SOME ASYNC FUNCTION IN FdicSdiQuarter_factory GENERATOR&quot;, e)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="nosql-database"><a href="#nosql-database" class="headerlink" title="nosql database"></a>nosql database</h3><p>I use nedb quite liberally to persist state. I tend to use many smaller tables that can  be scoped to a particular quarter and easily reset if needed. (It’s no fun to have to start processing <em>all</em> quarters if there’s an error in just one quarter.)</p>
+<h3 id="npm-package-publish-consume"><a href="#npm-package-publish-consume" class="headerlink" title="npm package publish, consume"></a>npm package publish, consume</h3><p>This project is published as an npm repo. Though it’s not really necessary, it’s a really nice convenience to be able to include it wherever I want. These classes will eventually be used in admin ui screens. </p>
+<h1 id="Example-Blooming-Menu-Directive"><a href="#Example-Blooming-Menu-Directive" class="headerlink" title="Example: Blooming Menu Directive"></a>Example: Blooming Menu Directive</h1><h6 id="Source-code-1"><a href="#Source-code-1" class="headerlink" title="Source code:"></a>Source code:</h6><p><a href="https://github.com/duke83/ts-04-blooming-menu" target="_blank" rel="external">https://github.com/duke83/ts-04-blooming-menu</a></p>
+<p><img src="/blog/static/bloomingMenu2.gif" alt=""></p>
+<p>This particular code is an early prototype of a new navigation paradigm my client wanted to use. Though none of this code made it to production, it demonstrates a rapid development effort built in an angular environment.</p>
+<p>Much of the magic behind this has to do with css transformations and a little html trickery. The buttons are on a totally different tree as the button text. This is because the buttons had to be transparent, while the button text had to be opaque.</p>
+<h1 id="Example-Address-Verification-Directive"><a href="#Example-Address-Verification-Directive" class="headerlink" title="Example: Address Verification Directive"></a>Example: Address Verification Directive</h1><h6 id="Live-demo"><a href="#Live-demo" class="headerlink" title="Live demo:"></a>Live demo:</h6><p><a href="http://datadoodler.github.io/ts-00-address-suggestion-directive/" target="_blank" rel="external">http://datadoodler.github.io/ts-00-address-suggestion-directive/</a></p>
+<h6 id="Source-code-2"><a href="#Source-code-2" class="headerlink" title="Source code:"></a>Source code:</h6><p><a href="https://github.com/datadoodler/ts-00-address-suggestion-directive" target="_blank" rel="external">https://github.com/datadoodler/ts-00-address-suggestion-directive</a></p>
+<p>The workings of this directive are illustrated in the following 3 scenarios. In each scenario, after the user initially presses ‘save’, the directive makes a call to the address validation service, injects appropriate html (if needed), waits for a user response, and updates the address fields accordingly.</p>
+<p> <img src="/blog/static/address-validation-directive-1.png" alt="Address fields on a page before user presses save"></p>
+<h4 id="The-three-scenarios-this-directive-handles"><a href="#The-three-scenarios-this-directive-handles" class="headerlink" title="The three scenarios this directive handles:"></a>The three scenarios this directive handles:</h4><ol>
+<li>User enters an invalid address and the service returns a suggested address</li>
+<li>User enters a invalid address and the service doesn’t return a suggested address</li>
+<li>User enters a valid address</li>
+</ol>
+<h4 id="Case-1"><a href="#Case-1" class="headerlink" title="Case 1"></a>Case 1</h4><p>Upon pressing Save, the address service is not able to find an address that matches what the user entered. But it <em>is</em> able to find a <em>possible</em> match, and returns it as a suggestion. The user is given the option to select the suggested address or force the save with the original address.<br><img src="/blog/static/address-validation-directive-2.png" alt="After pressing Save, directive calls validation service and returns a suggested address if it can&#39;t find a perfect match"></p>
+<p><img src="/blog/static/address-validation-directive-3.png" alt="After address is validated and/or has user approval normal processing continues"></p>
 
       
     </div>
@@ -136,12 +184,12 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/blog/2016/04/07/r-packages/keeping track of chess positions/" data-id="cimqnqmjb00008wxvawl8sm2p" class="article-share-link">
+      <a data-url="http://yoursite.com/blog/blog/2016/04/21/tidbits/skills-demo/" data-id="cinaefuph0000jr0a1yd90vp6" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Analytics/">Analytics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Chess/">Chess</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/R-Packages/">R Packages</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Angular/">Angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Demo/">Demo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Directives/">Directives</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ECMAScript-6/">ECMAScript 6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/NPM/">NPM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Node/">Node</a></li></ul>
 
 
     </footer>
@@ -151,16 +199,16 @@
 <ul id="article-nav" class="nav nav-pills nav-justified">
   
   <li role="presentation">
-    <a href="/blog/2016/04/01/tidbits/node-app-config/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/2016/04/07/r-packages/getting chess data/" id="article-nav-older" class="article-nav-link-wrap">
       <i class="fa fa-chevron-left pull-left"></i>
-      <span class="article-nav-link-title">Node App Configuration</span>
+      <span class="article-nav-link-title">How can the data for a game be obtained and neatened?</span>
     </a>
   </li>
   
   
   <li role="presentation">
-    <a href="/blog/2016/04/07/r-packages/getting chess data/" id="article-nav-newer" class="article-nav-link-wrap">
-      <span class="article-nav-link-title">How can the data for a game be obtained and neatened?</span>
+    <a href="/blog/2017/03/14/bankerdoodle/bankerdoodle-intro/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">BankerDoodle Intro</span>
       <i class="fa fa-chevron-right pull-right"></i>
     </a>
   </li>

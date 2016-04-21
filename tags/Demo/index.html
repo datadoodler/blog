@@ -3,21 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>How can chess positions be kept track of? | The Data Doodle</title>
+  <title>Tag: Demo | The Data Doodle</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="I keep track of chess positions using a data frame of 64 variables, one for each square of the chessboard. An example of an empty chessboard can be generated with the empty function:
-1234load(&quot;chessDo">
-<meta property="og:type" content="article">
-<meta property="og:title" content="How can chess positions be kept track of?">
-<meta property="og:url" content="http://yoursite.com/blog/2016/04/07/r-packages/keeping track of chess positions/index.html">
+  <meta name="description" content="Making the world smarter">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Data Doodle">
+<meta property="og:url" content="http://yoursite.com/blog/tags/Demo/index.html">
 <meta property="og:site_name" content="The Data Doodle">
-<meta property="og:description" content="I keep track of chess positions using a data frame of 64 variables, one for each square of the chessboard. An example of an empty chessboard can be generated with the empty function:
-1234load(&quot;chessDo">
-<meta property="og:updated_time" content="2016-04-07T19:05:05.000Z">
+<meta property="og:description" content="Making the world smarter">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="How can chess positions be kept track of?">
-<meta name="twitter:description" content="I keep track of chess positions using a data frame of 64 variables, one for each square of the chessboard. An example of an empty chessboard can be generated with the empty function:
-1234load(&quot;chessDo">
+<meta name="twitter:title" content="The Data Doodle">
+<meta name="twitter:description" content="Making the world smarter">
   
     <link rel="alternate" href="/atom.xml" title="The Data Doodle" type="application/atom+xml">
   
@@ -86,90 +82,55 @@
   <div class="container">
     <div class="row">
         <div class="col-sm-8 blog-main">
-          <article id="post-r-packages/keeping track of chess positions" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <header class="article-header">
+          
+  
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/blog/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <header class="archive-article-header">
     
   
-    <h1 class="article-title" itemprop="name">
-      How can chess positions be kept track of?
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/blog/2016/04/21/tidbits/skills-demo/">Skills Demo - A Few Examples</a>
     </h1>
   
 
 
-  </header>
-
-  <div class="article-meta">
     <div class="article-datetime">
-  <a href="/blog/2016/04/07/r-packages/keeping track of chess positions/" class="article-date"><time datetime="2016-04-07T04:00:00.000Z" itemprop="datePublished">2016-04-07</time></a>
+  <a href="/blog/2016/04/21/tidbits/skills-demo/" class="archive-article-date"><time datetime="2016-04-21T10:50:08.000Z" itemprop="datePublished">April 21st</time></a>
 </div>
 
-    <div class="article-author">Josh Merrell</div>
+  </header>
+  <div class="article-entry" itemprop="articleBody">
     
-  <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/R-Packages/">R Packages</a>
-  </div>
-
-
-  </div>
-  <div class="article-inner">
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>I keep track of chess positions using a data frame of 64 variables, one for each square of the chessboard. An example of an empty chessboard can be generated with the <em>empty</em> function:</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">load(<span class="string">"chessDoodles.RData"</span>)</span><br><span class="line"></span><br><span class="line">position &lt;- empty(gameName = <span class="string">"example"</span>)</span><br><span class="line">position</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">##               a8 a7 a6 a5 a4 a3 a2 a1 b8 b7 b6 b5 b4 b3 b2 b1 c8 c7 c6 c5</span><br><span class="line">## example_empty NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA</span><br><span class="line">##               c4 c3 c2 c1 d8 d7 d6 d5 d4 d3 d2 d1 e8 e7 e6 e5 e4 e3 e2 e1</span><br><span class="line">## example_empty NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA</span><br><span class="line">##               f8 f7 f6 f5 f4 f3 f2 f1 g8 g7 g6 g5 g4 g3 g2 g1 h8 h7 h6 h5</span><br><span class="line">## example_empty NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA</span><br><span class="line">##               h4 h3 h2 h1</span><br><span class="line">## example_empty NA NA NA NA</span><br></pre></td></tr></table></figure>
-<p>Note that columns are named after squares of the chessboard, and rows are named in gameName_move format. An example of a chessboard where the pieces have not been moved can be generated with the <em>setup</em> function (which internally calls the <em>empty</em> function):</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">position &lt;- setup(gameName = <span class="string">"game1"</span>)</span><br><span class="line">position[,c(<span class="string">"d1"</span>,<span class="string">"e1"</span>,<span class="string">"d8"</span>,<span class="string">"e8"</span>)]</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">##                      d1         e1          d8         e8</span><br><span class="line">## game1_empty        &lt;NA&gt;       &lt;NA&gt;        &lt;NA&gt;       &lt;NA&gt;</span><br><span class="line">## game1_zero  white Queen white King black Queen black King</span><br></pre></td></tr></table></figure>
-<p>The position object is built row-by-row using the <em>newPosition</em> function.</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">newRow &lt;- newPosition(new_pgn = <span class="string">"game1_1.e4"</span>, startPosition = nrow(position))</span><br><span class="line">position &lt;- rbind(position,newRow)</span><br><span class="line">position[,c(<span class="string">"e2"</span>,<span class="string">"e4"</span>)]</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">##                     e2         e4</span><br><span class="line">## game1_empty       &lt;NA&gt;       &lt;NA&gt;</span><br><span class="line">## game1_zero  white pawn       &lt;NA&gt;</span><br><span class="line">## game1_1.e4        &lt;NA&gt; white pawn</span><br></pre></td></tr></table></figure>
-<p>This <em>position</em> object is referenced by all the position-oriented functions I have written.</p>
-
-      
-    </div>
-
-    
-      
-
-    
-
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/blog/2016/04/07/r-packages/keeping track of chess positions/" data-id="cimqnqmjb00008wxvawl8sm2p" class="article-share-link">
-        <i class="fa fa-share"></i> Share
-      </a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Analytics/">Analytics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Chess/">Chess</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/R-Packages/">R Packages</a></li></ul>
-
-
-    </footer>
-  </div>
-  
-    
-<ul id="article-nav" class="nav nav-pills nav-justified">
-  
-  <li role="presentation">
-    <a href="/blog/2016/04/01/tidbits/node-app-config/" id="article-nav-older" class="article-nav-link-wrap">
-      <i class="fa fa-chevron-left pull-left"></i>
-      <span class="article-nav-link-title">Node App Configuration</span>
-    </a>
-  </li>
-  
-  
-  <li role="presentation">
-    <a href="/blog/2016/04/07/r-packages/getting chess data/" id="article-nav-newer" class="article-nav-link-wrap">
-      <span class="article-nav-link-title">How can the data for a game be obtained and neatened?</span>
-      <i class="fa fa-chevron-right pull-right"></i>
-    </a>
-  </li>
-  
+    <p>This document is intended to be a guided tour through some of my code. It will provide some insight into my skill set, coding style, and overall approach to developing apps. Scroll through this docuement to find the following examples:</p>
+<ul>
+<li>fdic-sdi-manager (node-based ETL with lots of cool es6 features)</li>
+<li>Blooming Menu Directive (angular directive, animation)</li>
+<li>Address Verification Directive (angular directive, promise-based DOM manipulation)</li>
 </ul>
-
+    
+    <p class="article-more-link">
+      <a href="/blog/2016/04/21/tidbits/skills-demo/#more">Read More</a>
+    </p>
+    
+    
+  </div>
+</article>
 
   
-</article>
+  
+    </div></section>
+  
 
 
 
